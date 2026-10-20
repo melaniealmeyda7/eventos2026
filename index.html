@@ -1,0 +1,2346 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPPORTUNEUR IMPACT FORUM 2026 | Polyglot Map & YLAI Community</title>
+  <meta name="description" content="Un espacio internacional para conectar talento de Latinoamérica con conocimiento, herramientas de vanguardia, referentes de impacto y oportunidades globales junto a la comunidad de YLAI Fellows & Alumni." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-polyglot.png" />
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Canvas Confetti for Registration -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            polyglot: {
+              navy: '#050816',
+              deep: '#0a0f26',
+              card: '#101633',
+              border: '#1f294f',
+              primary: '#4f46e5',
+              secondary: '#9333ea',
+              accent: '#06b6d4',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              rose: '#f43f5e'
+            }
+          },
+          animation: {
+            'gradient-x': 'gradient-x 8s ease infinite',
+            'float-slow': 'float-slow 6s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+            'marquee': 'marquee 30s linear infinite',
+          },
+          keyframes: {
+            'gradient-x': {
+              '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+              '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+            },
+            'float-slow': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { opacity: '0.4' },
+              '50%': { opacity: '0.8' },
+            },
+            'marquee': {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Estilos Polyglot Map oficiales */
+    body {
+      background-color: #050816;
+      color: #f8fafc;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .glass-nav {
+      background: rgba(5, 8, 22, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-card {
+      background: rgba(16, 22, 51, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 12px 30px -10px rgba(79, 70, 229, 0.25);
+    }
+
+    .gradient-polyglot-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gradient-hero-badge {
+      background: linear-gradient(90deg, rgba(79, 70, 229, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+      border: 1px solid rgba(168, 85, 247, 0.4);
+    }
+
+    .btn-gradient-polyglot {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px -2px rgba(99, 102, 241, 0.5);
+    }
+    .btn-gradient-polyglot:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.6);
+      transform: translateY(-2px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #050816;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f294f;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3730a3;
+    }
+  </style>
+</head>
+<body class="selection:bg-indigo-500 selection:text-white">
+
+  <!-- Ambient Glowing Background Spheres -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl animate-pulse-glow"></div>
+    <div class="absolute top-1/3 -right-40 w-[30rem] h-[30rem] bg-purple-600/15 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 2s;"></div>
+    <div class="absolute -bottom-40 left-1/3 w-[28rem] h-[28rem] bg-cyan-600/15 rounded-full blur-3xl animate-pulse-glow" style="animation-delay: 4s;"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f293708_1px,transparent_1px),linear-gradient(to_bottom,#1f293708_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+  </div>
+
+  <!-- Top Announcement Bar -->
+  <div class="relative z-50 bg-gradient-to-r from-indigo-900/90 via-purple-900/90 to-blue-900/90 text-xs py-2 px-4 text-center border-b border-indigo-500/20 text-indigo-200 flex items-center justify-center gap-2 flex-wrap">
+    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-semibold text-[11px] border border-emerald-500/30">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+      INSCRIPCIONES ABIERTAS
+    </span>
+    <span>Sábado 7 de Noviembre 2026 • 4:00 PM – 7:00 PM (PET Perú) • 100% Virtual</span>
+    <a href="#registro" class="underline font-semibold hover:text-white transition-colors ml-1">Reserva tu cupo gratis →</a>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 p-2 group-hover:border-indigo-400 transition-colors">
+          <img src="assets/logo-polyglot.png" alt="Polyglot Map" class="w-full h-full object-contain" />
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold tracking-tight text-lg text-white">OPPORTUNEUR</span>
+            <span class="text-xs px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-mono font-semibold border border-indigo-500/30">FORUM 2026</span>
+          </div>
+          <span class="text-[11px] text-slate-400 font-medium tracking-wide flex items-center gap-1">
+            by <strong class="text-slate-200">Polyglot Map</strong> & YLAI Alumni
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#concepto" class="hover:text-indigo-400 transition-colors">Concepto</a>
+        <a href="#sponsors" class="hover:text-indigo-400 transition-colors text-indigo-300 font-semibold">Sponsors</a>
+        <a href="#areas" class="hover:text-indigo-400 transition-colors">5 Áreas</a>
+        <a href="#agenda" class="hover:text-indigo-400 transition-colors">Agenda</a>
+        <a href="#speakers" class="hover:text-indigo-400 transition-colors">Speakers</a>
+        <a href="#networking" class="hover:text-indigo-400 transition-colors">Networking</a>
+        <a href="#bootcamp" class="hover:text-indigo-400 transition-colors flex items-center gap-1">
+          <span class="text-amber-400 font-semibold">Bootcamp Lab</span>
+          <span class="text-[9px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded font-bold">NUEVO</span>
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="#registro" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-gradient-polyglot text-white font-semibold text-sm shadow-md">
+          <i data-lucide="ticket" class="w-4 h-4"></i>
+          <span>Registrarme Gratis</span>
+        </a>
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir Menú">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden glass-nav border-t border-slate-800 px-4 pt-3 pb-6 space-y-3">
+      <a href="#concepto" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Concepto</a>
+      <a href="#sponsors" class="block px-3 py-2 rounded-lg text-indigo-300 font-semibold hover:bg-white/5">Sponsors & Aliados</a>
+      <a href="#areas" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">5 Áreas</a>
+      <a href="#agenda" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Agenda</a>
+      <a href="#speakers" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Speakers</a>
+      <a href="#networking" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Networking</a>
+      <a href="#bootcamp" class="block px-3 py-2 rounded-lg text-amber-300 font-semibold hover:bg-white/5">Bootcamp Lab</a>
+      <div class="pt-2">
+        <a href="#registro" class="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl btn-gradient-polyglot text-white font-semibold text-sm">
+          <i data-lucide="ticket" class="w-4 h-4"></i>
+          <span>Registrarme Gratis</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <!-- Top Pill Badges -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full gradient-hero-badge mb-8 backdrop-blur-md">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+          </span>
+          <span class="text-xs sm:text-sm font-semibold text-indigo-200">Encuentro Internacional Virtual de Líderes Emprendedores</span>
+          <span class="text-slate-500">•</span>
+          <span class="text-xs sm:text-sm font-medium text-purple-300 flex items-center gap-1">
+            <i data-lucide="globe" class="w-3.5 h-3.5"></i> Conectando Latinoamérica
+          </span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white max-w-5xl mx-auto leading-tight md:leading-[1.1] mb-6">
+          OPPORTUNEUR <br class="hidden sm:inline" />
+          <span class="gradient-polyglot-text">IMPACT FORUM 2026</span>
+        </h1>
+
+        <!-- Concept Quote -->
+        <div class="max-w-3xl mx-auto mb-8">
+          <p class="text-xl sm:text-2xl md:text-3xl font-light text-slate-200 italic tracking-wide">
+            “Empowering talent. <span class="text-indigo-400 font-semibold not-italic">Unlocking global opportunities.”</span>
+          </p>
+          <p class="mt-4 text-base sm:text-lg text-slate-400 font-normal leading-relaxed">
+            Un espacio internacional para conectar talento de Latinoamérica con conocimiento, herramientas de vanguardia, referentes de impacto y oportunidades globales junto a la comunidad de <strong class="text-white">YLAI Fellows & Alumni</strong>.
+          </p>
+        </div>
+
+        <!-- Quick Event Coordinates Pill Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto mb-10 text-left">
+          
+          <div class="glass-card p-4 rounded-2xl border border-slate-800">
+            <div class="flex items-center gap-2 text-indigo-400 text-xs font-semibold mb-1">
+              <i data-lucide="calendar" class="w-4 h-4"></i> FECHA
+            </div>
+            <div class="text-white font-bold text-sm sm:text-base">Sábado 7 Nov 2026</div>
+            <div class="text-slate-400 text-xs">Apertura 4:00 PM PET</div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl border border-slate-800">
+            <div class="flex items-center gap-2 text-purple-400 text-xs font-semibold mb-1">
+              <i data-lucide="clock" class="w-4 h-4"></i> HORARIO
+            </div>
+            <div class="text-white font-bold text-sm sm:text-base">4:00 PM – 7:00 PM</div>
+            <div class="text-slate-400 text-xs">PET (Hora Perú / LatAm)</div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl border border-slate-800">
+            <div class="flex items-center gap-2 text-cyan-400 text-xs font-semibold mb-1">
+              <i data-lucide="video" class="w-4 h-4"></i> MODALIDAD
+            </div>
+            <div class="text-white font-bold text-sm sm:text-base">100% Virtual</div>
+            <div class="text-slate-400 text-xs">Acceso en Vivo HD</div>
+          </div>
+
+          <div class="glass-card p-4 rounded-2xl border border-slate-800">
+            <div class="flex items-center gap-2 text-emerald-400 text-xs font-semibold mb-1">
+              <i data-lucide="users" class="w-4 h-4"></i> DIRIGIDO A
+            </div>
+            <div class="text-white font-bold text-sm sm:text-base">Líderes Emprendedores</div>
+            <div class="text-slate-400 text-xs">Jóvenes profesionales & agentes de cambio</div>
+          </div>
+
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a href="#registro" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gradient-polyglot text-white font-bold text-base flex items-center justify-center gap-3">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+            <span>Inscribirme Gratis al Forum</span>
+          </a>
+          <a href="#areas" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card text-slate-200 font-semibold text-base hover:bg-white/10 hover:text-white transition-all flex items-center justify-center gap-2">
+            <i data-lucide="compass" class="w-5 h-5 text-indigo-400"></i>
+            <span>Ver las 5 Áreas Temáticas</span>
+          </a>
+        </div>
+
+        <!-- COUNTDOWN TIMER -->
+        <div class="max-w-3xl mx-auto glass-card p-6 sm:p-8 rounded-3xl border border-indigo-500/20 shadow-2xl relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl"></div>
+          
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="text-center sm:text-left">
+              <span class="text-xs uppercase tracking-widest text-indigo-300 font-bold block mb-1">CUENTA REGRESIVA OFICIAL</span>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Nos vemos en el Forum</h3>
+              <p class="text-xs text-slate-400">7 de Noviembre de 2026 • 4:00 PM (PET)</p>
+            </div>
+
+            <!-- Countdown Boxes -->
+            <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
+              <div class="bg-polyglot-deep/80 border border-slate-700/60 rounded-xl p-3 min-w-[65px] sm:min-w-[80px]">
+                <span id="days" class="block text-2xl sm:text-3xl font-black text-white font-mono">00</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 font-medium uppercase">Días</span>
+              </div>
+              <div class="bg-polyglot-deep/80 border border-slate-700/60 rounded-xl p-3 min-w-[65px] sm:min-w-[80px]">
+                <span id="hours" class="block text-2xl sm:text-3xl font-black text-white font-mono">00</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 font-medium uppercase">Horas</span>
+              </div>
+              <div class="bg-polyglot-deep/80 border border-slate-700/60 rounded-xl p-3 min-w-[65px] sm:min-w-[80px]">
+                <span id="minutes" class="block text-2xl sm:text-3xl font-black text-white font-mono">00</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 font-medium uppercase">Min</span>
+              </div>
+              <div class="bg-polyglot-deep/80 border border-slate-700/60 rounded-xl p-3 min-w-[65px] sm:min-w-[80px]">
+                <span id="seconds" class="block text-2xl sm:text-3xl font-black text-indigo-400 font-mono">00</span>
+                <span class="text-[10px] sm:text-xs text-slate-400 font-medium uppercase">Seg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Co-Leaders & Sponsors Pill Badges -->
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-4 text-sm text-slate-400">
+          <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 rounded-full py-1.5 px-4">
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Organiza:</span>
+            <span class="text-white font-semibold flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-400"></span> Polyglot Map
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2 bg-slate-900/60 border border-slate-800 rounded-full py-1.5 px-4">
+            <span class="text-xs uppercase tracking-wider text-slate-500 font-semibold">Lideran:</span>
+            <span class="text-slate-200">
+              <strong class="text-white">Melanie Teresa Almeyda Poicón</strong> & <strong class="text-white">Nataly Napanga</strong> (YLAI Fellows 2026)
+            </span>
+          </div>
+
+          <a href="#sponsors" class="flex items-center gap-2 bg-indigo-950/40 border border-indigo-500/30 hover:border-indigo-400 rounded-full py-1.5 px-4 transition-colors">
+            <span class="text-xs uppercase tracking-wider text-indigo-400 font-bold">Con el apoyo de:</span>
+            <span class="text-slate-200 font-semibold text-xs flex items-center gap-2">
+              <span>U.S. Department of State</span> • <span>YLAI Program</span>
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== LOGO TICKER / COUNTRIES MARQUEE ==================== -->
+    <div class="border-y border-slate-800/80 bg-polyglot-deep/60 py-4 overflow-hidden relative">
+      <div class="flex whitespace-nowrap animate-marquee items-center gap-8 text-sm font-medium text-slate-400">
+        <span class="flex items-center gap-2 text-indigo-300 font-bold tracking-wider">
+          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i> CON EL APOYO DE: U.S. DEPARTMENT OF STATE • YLAI PROGRAM
+        </span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇵🇪</span> PERÚ</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇵🇦</span> PANAMÁ</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇨🇷</span> COSTA RICA</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇧🇴</span> BOLIVIA</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇻🇪</span> VENEZUELA</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇸🇻</span> EL SALVADOR</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇲🇽</span> MÉXICO</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-indigo-400 font-bold uppercase tracking-wider">★ YLAI COMMUNITY OF IMPACT</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-purple-400 font-bold uppercase tracking-wider">★ POLYGLOT MAP ACADEMY</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-amber-400 font-bold uppercase tracking-wider">★ SPLENDIA</span>
+        <span class="text-slate-600">•</span>
+        <!-- Repeated for seamless loop -->
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇵🇪</span> PERÚ</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇵🇦</span> PANAMÁ</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇨🇷</span> COSTA RICA</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇧🇴</span> BOLIVIA</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇻🇪</span> VENEZUELA</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇸🇻</span> EL SALVADOR</span>
+        <span class="text-slate-600">•</span>
+        <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇲🇽</span> MÉXICO</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-indigo-400 font-bold uppercase tracking-wider">★ YLAI COMMUNITY OF IMPACT</span>
+        <span class="text-slate-600">•</span>
+        <span class="text-purple-400 font-bold uppercase tracking-wider">★ POLYGLOT MAP ACADEMY</span>
+        <span class="text-slate-600">•</span>
+      </div>
+    </div>
+
+    <!-- ==================== CONCEPTO & MANIFIESTO ==================== -->
+    <section id="concepto" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold tracking-wider uppercase">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Nuestra Misión
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
+              Conectamos talento extraordinario con oportunidades sin fronteras.
+            </h2>
+            
+            <p class="text-slate-300 leading-relaxed text-base">
+              América Latina rebosa de talento, creatividad y resiliencia. Sin embargo, las redes de contacto estratégicas, el financiamiento y el acceso a los mercados internacionales siguen concentrados de manera desigual.
+            </p>
+            
+            <p class="text-slate-400 leading-relaxed text-sm">
+              <strong class="text-white">OPPORTUNEUR IMPACT FORUM</strong> nace bajo el liderazgo de becarias YLAI 2026 de Perú para romper esas barreras geográficas. A través de un formato interactivo y multidisciplinario, articulamos referentes de primer nivel con jóvenes emprendedores y profesionales que están listos para dar el salto global.
+            </p>
+
+            <!-- Quotes Box -->
+            <div class="p-5 rounded-2xl bg-indigo-950/40 border-l-4 border-indigo-500 text-indigo-200 text-sm italic">
+              “No necesitas esperar a tener una oportunidad. Necesitas estar conectado con quienes pueden ayudarte a crearla.”
+            </div>
+
+            <!-- Pillars Counter List -->
+            <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800">
+              <div>
+                <span class="text-2xl font-black text-indigo-400">5</span>
+                <span class="block text-xs text-slate-400 font-medium">Ejes Estratégicos</span>
+              </div>
+              <div>
+                <span class="text-2xl font-black text-purple-400">+10</span>
+                <span class="block text-xs text-slate-400 font-medium">Speakers & Líderes</span>
+              </div>
+              <div>
+                <span class="text-2xl font-black text-cyan-400">6+</span>
+                <span class="block text-xs text-slate-400 font-medium">Países en Vivo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Concept Card Showcase -->
+          <div class="lg:col-span-6 relative">
+            <div class="glass-card p-8 rounded-3xl border border-indigo-500/30 relative overflow-hidden shadow-2xl">
+              <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-300">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-white font-bold text-sm">Iniciativa Oficial 2026</h4>
+                    <p class="text-xs text-slate-400">Red de Becarios YLAI & Polyglot Map</p>
+                  </div>
+                </div>
+                <span class="text-xs font-mono font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                  Virtual Live
+                </span>
+              </div>
+
+              <div class="space-y-4 py-6">
+                
+                <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="target" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-semibold text-white">Objetivo General</h5>
+                    <p class="text-xs text-slate-300 mt-0.5">
+                      Crear un espacio internacional de conexión, aprendizaje y networking que fortalezca las capacidades de jóvenes profesionales y emprendedores latinoamericanos y los acerque a oportunidades globales.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-300 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="compass" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-semibold text-white">Puente hacia la Acción</h5>
+                    <p class="text-xs text-slate-300 mt-0.5">
+                      No es solo un evento de conferencias pasivas: cada participante formula sus preguntas clave de networking y accede a la convocatoria del <strong>Bootcamp Lab</strong>.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                  <div class="w-8 h-8 rounded-lg bg-purple-500/20 text-purple-300 flex items-center justify-center shrink-0 mt-0.5">
+                    <i data-lucide="globe-2" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-semibold text-white">YLAI Community of Impact</h5>
+                    <p class="text-xs text-slate-300 mt-0.5">
+                      Contamos con la experiencia de Fellows del programa Young Leaders of the Americas Initiative (del Dpto. de Estado de EE.UU.) en múltiples industrias.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Footer Badge inside Card -->
+              <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                <span>Inscripción Gratuita para Latinoamérica</span>
+                <span class="text-indigo-400 font-semibold">Cupos Limitados</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CO-ORGANIZADORES & SPONSORS (ESTILO DIBCODE) ==================== -->
+    <section id="sponsors" class="py-24 bg-polyglot-deep/80 border-y border-slate-800/80 relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[38rem] h-[20rem] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 relative z-10">
+        
+        <!-- Bloque 1: Co-organizadores / Quiénes organizan -->
+        <div>
+          <div class="text-center sm:text-left mb-12">
+            <p class="mb-3 text-xs sm:text-sm font-bold uppercase tracking-widest text-indigo-400 flex items-center justify-center sm:justify-start gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-400"></span> Co-organizadores
+            </p>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+              Quiénes organizan
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+              Iniciativa liderada por fundadoras y emprendedoras de alto impacto de la comunidad de becarios de excelencia internacional.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
+            
+            <!-- Polyglot Map -->
+            <a href="https://polyglotmap.com" target="_blank" rel="noopener noreferrer" class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/50 flex flex-col items-center text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div class="flex h-24 w-full items-center justify-center rounded-2xl bg-white p-3.5 shadow-lg shadow-indigo-500/10 group-hover:scale-105 transition-transform">
+                <img src="assets/logo-polyglot.png" alt="Polyglot Map" class="h-14 sm:h-16 w-auto object-contain" />
+              </div>
+              <div class="space-y-1.5">
+                <span class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors block">Polyglot Map</span>
+                <span class="text-xs font-semibold text-indigo-400 block">Organizador Principal</span>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Academia y comunidad internacional de idiomas, inteligencia artificial y empleabilidad global fundada en Lima, Perú por Melanie Almeyda (YLAI Fellow 2026).
+                </p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-indigo-300 font-medium group-hover:underline">
+                    Conocer Polyglot Map →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- SPLENDIA -->
+            <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-amber-500/50 flex flex-col items-center text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div class="flex h-24 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform">
+                <img src="assets/logo-splendia.png" alt="SPLENDIA" class="h-16 w-auto object-contain" />
+              </div>
+              <div class="space-y-1.5">
+                <span class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors block">SPLENDIA</span>
+                <span class="text-xs font-semibold text-amber-400 block">Co-organizador</span>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Compañía de alto impacto liderada por Nataly Napanga (YLAI Fellow 2026) dedicada a impulsar el bienestar, el emprendimiento y el liderazgo de proyectos en LatAm.
+                </p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-amber-300 font-medium">
+                    Emprendimiento & Liderazgo
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Línea divisoria estilo dibcode -->
+        <div class="h-px w-full bg-slate-800/80"></div>
+
+        <!-- Bloque 2: Sponsors / Con el apoyo de -->
+        <div>
+          <div class="text-center sm:text-left mb-12">
+            <p class="mb-3 text-xs sm:text-sm font-bold uppercase tracking-widest text-rose-400 flex items-center justify-center sm:justify-start gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-rose-400"></span> Sponsors Oficiales
+            </p>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+              Con el apoyo de
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
+              El evento cuenta con el respaldo institucional de programas y entidades del Gobierno de los Estados Unidos dedicados a conectar talento y abrir oportunidades en todo el continente.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
+            
+            <!-- Sponsor 1: U.S. Department of State -->
+            <a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 flex flex-col items-center text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div class="flex h-28 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
+                <img src="assets/ally-usembassy.png" alt="U.S. Department of State" class="h-20 w-auto object-contain" />
+              </div>
+              <div class="space-y-1.5">
+                <span class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors block">U.S. Department of State</span>
+                <span class="text-xs font-semibold text-slate-300 block">Departamento de Estado de los Estados Unidos</span>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Departamento Ejecutivo del Gobierno Federal de los Estados Unidos responsable de las relaciones internacionales y promotor de programas de liderazgo juvenil, innovación cívica y prosperidad económica en el hemisferio occidental.
+                </p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-indigo-400 font-semibold group-hover:underline">
+                    state.gov — Sitio Oficial →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+            <!-- Sponsor 2: YLAI Program -->
+            <a href="https://ylai.state.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-amber-500/50 flex flex-col items-center text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div class="flex h-28 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform">
+                <img src="assets/ally-ylai.png" alt="YLAI Program" class="h-16 w-auto object-contain" />
+              </div>
+              <div class="space-y-1.5">
+                <span class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors block">YLAI Program</span>
+                <span class="text-xs font-semibold text-amber-400 block">Young Leaders of the Americas Initiative</span>
+                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                  Iniciativa insignia del Departamento de Estado de los EE. UU. implementada por IREX para empoderar, capacitar y conectar en redes a emprendedores y líderes de cambio sobresalientes de América Latina, el Caribe y Canadá.
+                </p>
+                <div class="pt-2">
+                  <span class="inline-flex items-center gap-1 text-xs text-amber-400 font-semibold group-hover:underline">
+                    ylai.state.gov — Sitio Oficial →
+                  </span>
+                </div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== LAS 5 ÁREAS DEL FORUM ==================== -->
+    <section id="areas" class="py-24 bg-polyglot-deep/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold tracking-wider uppercase mb-3">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Estructura Académica y Práctica
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Las 5 Áreas del Forum
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Diseñadas estratégicamente para cubrir desde la concepción de proyectos hasta la internacionalización y la conexión real con el ecosistema.
+          </p>
+        </div>
+
+        <!-- 5 Áreas Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- ÁREA 1: LIDERAZGO & IMPACTO (🟣) -->
+          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-purple-500/30 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-8 -top-8 w-28 h-28 bg-purple-600/10 rounded-full blur-xl group-hover:bg-purple-600/25 transition-all"></div>
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-purple-400"></span> ÁREA 1
+                </span>
+                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                  <i data-lucide="messages-square" class="w-3.5 h-3.5 text-purple-400"></i> Panel / Conversatorio
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                Liderazgo & Impacto
+              </h3>
+              <p class="text-sm font-semibold text-purple-200/90 mb-4">
+                “Liderar para generar impacto”
+              </p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Liderazgo con propósito e integridad.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Construcción de proyectos de alto impacto social.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Cómo pasar de una idea a una iniciativa sostenible.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
+                  <span>Liderazgo auténtico desde Latinoamérica.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Participantes:</span>
+              <div class="text-xs text-slate-200 font-medium">
+                Pedro Crisóstomo • Natalia Bejan
+              </div>
+            </div>
+          </div>
+
+          <!-- ÁREA 2: EMPRENDIMIENTO & NEGOCIOS (🟢) -->
+          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-emerald-500/30 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-8 -top-8 w-28 h-28 bg-emerald-600/10 rounded-full blur-xl group-hover:bg-emerald-600/25 transition-all"></div>
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> ÁREA 2
+                </span>
+                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                  <i data-lucide="globe" class="w-3.5 h-3.5 text-emerald-400"></i> Panel Internacional
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                Emprendimiento & Negocios
+              </h3>
+              <p class="text-sm font-semibold text-emerald-200/90 mb-4">
+                “De la idea a la oportunidad”
+              </p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>Cómo validar una idea en el mercado real.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>Emprender con recursos limitados (bootstrapping).</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>Modelos de negocio e innovación en LatAm.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
+                  <span>Errores y aprendizajes sin filtro de fundadores.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Participantes:</span>
+              <div class="text-xs text-slate-200 font-medium">
+                Nataly Napanga • Cristian Gutiérrez / Elizabeth Tolentino • Alfonso Rangel (PA) • Luis Avelán (CR)
+              </div>
+            </div>
+          </div>
+
+          <!-- ÁREA 3: IA, DIGITAL & FUTURO DEL TRABAJO (🔵) -->
+          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-cyan-500/30 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-8 -top-8 w-28 h-28 bg-cyan-600/10 rounded-full blur-xl group-hover:bg-cyan-600/25 transition-all"></div>
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-cyan-400"></span> ÁREA 3
+                </span>
+                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                  <i data-lucide="sparkle" class="w-3.5 h-3.5 text-cyan-400"></i> Keynote + Masterclass
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                IA, Digital & Futuro del Trabajo
+              </h3>
+              <p class="text-sm font-semibold text-cyan-200/90 mb-4">
+                “La IA no reemplaza tu talento. Lo potencia.”
+              </p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                  <span>IA aplicada a flujos de trabajo y emprendimiento.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                  <span>Herramientas digitales avanzadas y automatización.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                  <span>Nuevas habilidades indispensables para el mercado global.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
+                  <span>Preparación profesional para la economía de la IA.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Participantes:</span>
+              <div class="text-xs text-slate-200 font-medium">
+                Melanie Almeyda (Polyglot Map) • Jorge Escalante (El Salvador / Protolab Agency) • Andrea Vivas (Venezuela / Bespoke Education)
+              </div>
+            </div>
+          </div>
+
+          <!-- ÁREA 4: EMPLEABILIDAD & TALENTO GLOBAL (🟠) -->
+          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-amber-500/30 flex flex-col justify-between relative overflow-hidden group">
+            <div class="absolute -right-8 -top-8 w-28 h-28 bg-amber-600/10 rounded-full blur-xl group-hover:bg-amber-600/25 transition-all"></div>
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-amber-400"></span> ÁREA 4
+                </span>
+                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                  <i data-lucide="briefcase" class="w-3.5 h-3.5 text-amber-400"></i> Panel + Sesión Práctica
+                </span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                Empleabilidad & Talento Global
+              </h3>
+              <p class="text-sm font-semibold text-amber-200/90 mb-4">
+                “Convierte tu talento en oportunidades globales”
+              </p>
+              
+              <div class="space-y-2 mb-6">
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Empleabilidad remota e internacional.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Construcción de marca personal de alto impacto y LinkedIn.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Los idiomas como acelerador de movilidad laboral.</span>
+                </div>
+                <div class="text-xs text-slate-300 flex items-start gap-2">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Estrategias para conectar con clientes y empresas en el exterior.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80">
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Participantes:</span>
+              <div class="text-xs text-slate-200 font-medium">
+                José Mendoza (BO / Trabajito.com) • Melanie Almeyda • Gabriela Gaitán (Parlare)
+              </div>
+            </div>
+          </div>
+
+          <!-- ÁREA 5: GLOBAL NETWORKING (🌎) (Spans 2 columns on lg) -->
+          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-indigo-500/40 flex flex-col justify-between relative overflow-hidden group md:col-span-2 lg:col-span-2">
+            <div class="absolute -right-8 -top-8 w-44 h-44 bg-indigo-600/15 rounded-full blur-2xl group-hover:bg-indigo-600/30 transition-all"></div>
+            <div>
+              <div class="flex items-center justify-between mb-5">
+                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span> ÁREA 5 — EL CORAZÓN DEL FORUM
+                </span>
+                <span class="text-xs text-indigo-300 font-bold flex items-center gap-1">
+                  <i data-lucide="network" class="w-3.5 h-3.5"></i> Dinámica Interactiva en Vivo
+                </span>
+              </div>
+              
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+                    Global Networking: Latinoamérica Conecta Talento
+                  </h3>
+                  <p class="text-sm text-indigo-200/90 mt-1">
+                    Espacios activos de conexión profesional entre Perú, Panamá, Costa Rica, Bolivia, Venezuela y México.
+                  </p>
+                </div>
+              </div>
+
+              <!-- 4 Dinámicas Preguntas Clave -->
+              <p class="text-xs text-slate-400 mb-3 font-semibold uppercase tracking-wider">
+                Cada participante responderá en tiempo real:
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-indigo-500/30 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0">1</span>
+                  <span class="text-xs text-slate-200 font-medium"><strong>¿Quién soy?</strong> Identidad y trayectoria</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-purple-500/30 text-purple-300 flex items-center justify-center font-bold text-xs shrink-0">2</span>
+                  <span class="text-xs text-slate-200 font-medium"><strong>¿Qué hago?</strong> Proyectos y fortalezas</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-cyan-500/30 text-cyan-300 flex items-center justify-center font-bold text-xs shrink-0">3</span>
+                  <span class="text-xs text-slate-200 font-medium"><strong>¿Qué busco?</strong> Oportunidades, socios o empleo</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500/30 text-emerald-300 flex items-center justify-center font-bold text-xs shrink-0">4</span>
+                  <span class="text-xs text-slate-200 font-medium"><strong>¿Qué puedo aportar?</strong> Habilidades y valor</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
+              <span class="text-slate-300">
+                <strong class="text-white">Resultado:</strong> No solo mirar una pantalla, sino salir con contactos reales.
+              </span>
+              <a href="#networking" class="text-indigo-400 hover:text-indigo-300 font-semibold inline-flex items-center gap-1">
+                Conoce la dinámica completa →
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== AGENDA GENERAL (4:00 - 7:00 PM) ==================== -->
+    <section id="agenda" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-semibold tracking-wider uppercase mb-3">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i> Cronograma Oficial
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Agenda del Forum
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Sábado 7 de noviembre de 2026 • 3 horas intensivas de contenido de alto valor y conexiones directas.
+          </p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="max-w-4xl mx-auto space-y-4">
+
+          <!-- 4:00 - 4:10 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-slate-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-slate-800/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-slate-700">
+                <span class="text-xs font-bold text-white font-mono block">4:00 – 4:10</span>
+                <span class="text-[10px] text-slate-400">10 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">APERTURA</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Bienvenida e Inauguración Oficial</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Presentación institucional de Polyglot Map, YLAI Community y objetivos del encuentro.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-slate-400 self-start sm:self-center bg-white/[0.05] px-3 py-1 rounded-full border border-white/5">
+              Plenaria
+            </span>
+          </div>
+
+          <!-- 4:10 - 4:25 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-indigo-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-indigo-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-indigo-800">
+                <span class="text-xs font-bold text-indigo-300 font-mono block">4:10 – 4:25</span>
+                <span class="text-[10px] text-indigo-400">15 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-indigo-400 uppercase tracking-wider">KEYNOTE MAGISTRAL</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Empowering talent. Unlocking global opportunities.</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Por <strong>Melanie Almeyda</strong> (Polyglot Map) & <strong>Nataly Napanga</strong> (SPLENDIA) — YLAI Fellows 2026.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-indigo-300 font-semibold self-start sm:self-center bg-indigo-500/20 px-3 py-1 rounded-full border border-indigo-500/30">
+              Keynote
+            </span>
+          </div>
+
+          <!-- 4:25 - 4:55 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-purple-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-purple-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-purple-800">
+                <span class="text-xs font-bold text-purple-300 font-mono block">4:25 – 4:55</span>
+                <span class="text-[10px] text-purple-400">30 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-purple-400 uppercase tracking-wider">PANEL 1 • ÁREA 1</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Liderazgo & Impacto: Liderar con Propósito</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Construcción de proyectos de impacto y transición de ideas a iniciativas sostenibles en LatAm.<br/>
+                  <span class="text-slate-400">Speakers: Pedro Crisóstomo, Natalia Bejan.</span>
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-purple-300 font-semibold self-start sm:self-center bg-purple-500/20 px-3 py-1 rounded-full border border-purple-500/30">
+              Panel
+            </span>
+          </div>
+
+          <!-- 4:55 - 5:25 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-emerald-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-emerald-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-emerald-800">
+                <span class="text-xs font-bold text-emerald-300 font-mono block">4:55 – 5:25</span>
+                <span class="text-[10px] text-emerald-400">30 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider">PANEL 2 • ÁREA 2</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Emprendimiento & Negocios: De la Idea a la Oportunidad</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Validación temprana, modelos de negocio escalables y lecciones reales de fundadores internacionales.<br/>
+                  <span class="text-slate-400">Speakers: Nataly Napanga, Cristian Gutiérrez / Elizabeth Tolentino, Alfonso Rangel (PA), Luis Avelán (CR).</span>
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-emerald-300 font-semibold self-start sm:self-center bg-emerald-500/20 px-3 py-1 rounded-full border border-emerald-500/30">
+              Panel Int.
+            </span>
+          </div>
+
+          <!-- 5:25 - 5:35 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-amber-400 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-amber-500/5">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-amber-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-amber-800">
+                <span class="text-xs font-bold text-amber-300 font-mono block">5:25 – 5:35</span>
+                <span class="text-[10px] text-amber-400">10 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-amber-400 uppercase tracking-wider">DINÁMICA EN VIVO</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Networking Break & Dinámica de Activación</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Interacción rápida en el chat, encuestas en tiempo real y preparación para la segunda mitad.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-amber-300 font-semibold self-start sm:self-center bg-amber-500/20 px-3 py-1 rounded-full border border-amber-500/30">
+              Break Activo
+            </span>
+          </div>
+
+          <!-- 5:35 - 6:05 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-cyan-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-cyan-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-cyan-800">
+                <span class="text-xs font-bold text-cyan-300 font-mono block">5:35 – 6:05</span>
+                <span class="text-[10px] text-cyan-400">30 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-cyan-400 uppercase tracking-wider">PANEL 3 • ÁREA 3</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">IA, Digital & Future of Work: La IA Potencia tu Talento</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Herramientas aplicadas a la productividad, automatización y habilidades clave para el mercado tecnológico.<br/>
+                  <span class="text-slate-400">Speakers: Melanie Almeyda, Jorge Escalante (SV), Andrea Vivas (VE).</span>
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-cyan-300 font-semibold self-start sm:self-center bg-cyan-500/20 px-3 py-1 rounded-full border border-cyan-500/30">
+              Masterclass
+            </span>
+          </div>
+
+          <!-- 6:05 - 6:35 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-rose-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-rose-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-rose-800">
+                <span class="text-xs font-bold text-rose-300 font-mono block">6:05 – 6:35</span>
+                <span class="text-[10px] text-rose-400">30 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-rose-400 uppercase tracking-wider">PANEL 4 • ÁREA 4</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Empleabilidad & Talento Global: Convierte tu Talento en Oportunidades</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Trabajo remoto, marca personal en LinkedIn, idiomas y cómo abrir puertas con clientes y empleadores internacionales.<br/>
+                  <span class="text-slate-400">Speakers: José Mendoza (BO), Melanie Almeyda, Gabriela Gaitán.</span>
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-rose-300 font-semibold self-start sm:self-center bg-rose-500/20 px-3 py-1 rounded-full border border-rose-500/30">
+              Panel + Taller
+            </span>
+          </div>
+
+          <!-- 6:35 - 6:50 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-indigo-400 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-indigo-500/5">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-indigo-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-indigo-700">
+                <span class="text-xs font-bold text-indigo-300 font-mono block">6:35 – 6:50</span>
+                <span class="text-[10px] text-indigo-400">15 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-indigo-400 uppercase tracking-wider">ESPACIO PARTICIPATIVO</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Global Networking Rooms</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Salas simultáneas de vinculación activa respondiendo las 4 preguntas esenciales entre los países participantes.
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-indigo-300 font-semibold self-start sm:self-center bg-indigo-500/20 px-3 py-1 rounded-full border border-indigo-500/30">
+              Breakouts
+            </span>
+          </div>
+
+          <!-- 6:50 - 7:00 -->
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border-l-4 border-amber-500 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-amber-500/10">
+            <div class="flex items-start sm:items-center gap-4">
+              <div class="bg-amber-950/80 px-3 py-2 rounded-xl text-center min-w-[110px] shrink-0 border border-amber-700">
+                <span class="text-xs font-bold text-amber-300 font-mono block">6:50 – 7:00</span>
+                <span class="text-[10px] text-amber-400">10 minutos</span>
+              </div>
+              <div>
+                <span class="text-[11px] font-semibold text-amber-400 uppercase tracking-wider">CIERRE ESTRATÉGICO</span>
+                <h4 class="text-base sm:text-lg font-bold text-white">Cierre Estelar + Convocatoria Oficial OPPORTUNEUR BOOTCAMP LAB</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  “Hoy conectamos talento. En el Bootcamp Lab vamos a convertir esas conexiones en oportunidades.”
+                </p>
+              </div>
+            </div>
+            <span class="text-xs text-amber-300 font-bold self-start sm:self-center bg-amber-500/25 px-3 py-1 rounded-full border border-amber-500/40">
+              Lanzamiento
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== SPEAKERS & PANELISTS ==================== -->
+    <section id="speakers" class="py-24 bg-polyglot-deep/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold tracking-wider uppercase mb-3">
+            <i data-lucide="users" class="w-3.5 h-3.5"></i> Red de Referentes
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Speakers & Panelistas
+          </h2>
+          <p class="mt-4 text-slate-400 text-base">
+            Conoce a los líderes, fundadores y YLAI Alumni que compartirán sus experiencias, herramientas y redes de contacto durante el Forum.
+          </p>
+
+          <!-- Filter Tabs -->
+          <div class="flex items-center justify-center gap-2 mt-8 flex-wrap">
+            <button class="speaker-filter-btn px-4 py-2 rounded-xl text-xs font-bold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-600/30" data-filter="all">
+              Todos los Speakers
+            </button>
+            <button class="speaker-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-card text-slate-300 hover:text-white" data-filter="leaders">
+              ⭐ Dirección del Forum
+            </button>
+            <button class="speaker-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-card text-slate-300 hover:text-white" data-filter="peru">
+              🇵🇪 Perú
+            </button>
+            <button class="speaker-filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all glass-card text-slate-300 hover:text-white" data-filter="international">
+              🌎 Internacional (LatAm)
+            </button>
+          </div>
+        </div>
+
+        <!-- Speakers Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="speakersGrid">
+
+          <!-- 1. Melanie Almeyda (Líder / Perú) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-indigo-500/40 relative overflow-hidden" data-category="leaders peru">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                CO-DIRECTORA
+              </span>
+              <span class="text-lg" title="Perú">🇵🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl p-1 mb-4 mx-auto shadow-lg shadow-indigo-500/20 bg-gradient-to-tr from-indigo-500 to-purple-500 overflow-hidden">
+              <img src="assets/speaker-melanie-almeyda.jpg" alt="Melanie Almeyda" class="w-full h-full object-cover object-center rounded-[14px]" />
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Melanie Almeyda</h4>
+              <p class="text-xs text-indigo-400 font-semibold mt-0.5">Founder & CEO, Polyglot Map</p>
+              <div class="my-2.5 inline-block text-[11px] px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 font-mono font-semibold">
+                YLAI Fellow
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                IA aplicada, idiomas para movilidad internacional, empleabilidad e innovación educativa.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Nataly Napanga (Líder / Perú) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-purple-500/40 relative overflow-hidden" data-category="leaders peru">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold px-2.5 py-1 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                CO-DIRECTORA
+              </span>
+              <span class="text-lg" title="Perú">🇵🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-600 p-1 mb-4 mx-auto shadow-lg shadow-purple-500/20">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                NN
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Nataly Napanga</h4>
+              <p class="text-xs text-purple-400 font-semibold mt-0.5">CEO, SPLENDIA</p>
+              <div class="my-2.5 inline-block text-[11px] px-2.5 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20 font-mono font-semibold">
+                YLAI Fellow
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Emprendimiento de alto rendimiento, modelos de negocio sostenibles y liderazgo de impacto.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Natalia Bejan (Perú) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="peru">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Perú">🇵🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-600 p-1 mb-4 mx-auto">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                NB
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Natalia Bejan</h4>
+              <p class="text-xs text-emerald-400 font-semibold mt-0.5">Fundadora, Preservando</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Impacto Social & Eco
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Sostenibilidad, proyectos socioambientales y transición de ideas a iniciativas comunitarias.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Pedro Crisóstomo (Perú) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="peru">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-blue-500/10 text-blue-300 border border-blue-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Perú">🇵🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-1 mb-4 mx-auto">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                PC
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Pedro Crisóstomo</h4>
+              <p class="text-xs text-blue-400 font-semibold mt-0.5">Especialista en Liderazgo (Fulbright)</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Liderazgo Profesional
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Liderazgo con propósito, desarrollo profesional y proyección de carreras internacionales.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. Cristian Gutiérrez (Perú) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="peru">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Perú">🇵🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl p-1 mb-4 mx-auto shadow-lg shadow-amber-500/20 bg-gradient-to-tr from-amber-500 to-orange-500 overflow-hidden">
+              <img src="assets/speaker-cristian-gutierrez.jpg" alt="Cristian Gutiérrez" class="w-full h-full object-cover object-center rounded-[14px]" />
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Cristian Gutiérrez</h4>
+              <p class="text-xs text-amber-400 font-semibold mt-0.5">CEO de Ronin & Titi Brand</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Negocios & Branding
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Emprendimiento, branding disruptivo y modelos comerciales con recursos optimizados.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6. Gabriela Gaitán (Perú) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="peru">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-rose-500/10 text-rose-300 border border-rose-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Perú">🇵🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl p-1 mb-4 mx-auto shadow-lg shadow-pink-500/20 bg-gradient-to-tr from-pink-500 to-rose-500 overflow-hidden">
+              <img src="assets/speaker-gabriela-gaitan.jpg" alt="Gabriela Gaitán" class="w-full h-full object-cover object-center rounded-[14px]" />
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Gabriela Gaitán</h4>
+              <p class="text-xs text-rose-400 font-semibold mt-0.5">Directora, Parlare</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Comunicación Estratégica
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Habilidades de comunicación, pitch profesional, marca personal y persuasión para el mercado laboral.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7. Alfonso Rangel (Panamá) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="international">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Panamá">🇵🇦</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl p-1 mb-4 mx-auto shadow-lg shadow-emerald-500/20 bg-gradient-to-tr from-emerald-500 to-teal-500 overflow-hidden">
+              <img src="assets/speaker-alfonso-rangel.png" alt="Alfonso Rangel" class="w-full h-full object-cover object-top rounded-[14px]" />
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Alfonso Rangel</h4>
+              <p class="text-xs text-emerald-400 font-semibold mt-0.5">Fundador, Incubadora 21</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                AgTech & Emprendimiento
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Innovación agrícola, escalabilidad y modelos de aceleración de negocios en Centroamérica.
+              </p>
+            </div>
+          </div>
+
+          <!-- 8. Luis Avelán (Costa Rica) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="international">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Costa Rica">🇨🇷</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-500 p-1 mb-4 mx-auto">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                LA
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Luis Avelán</h4>
+              <p class="text-xs text-indigo-400 font-semibold mt-0.5">Líder, Farmacia Británica</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Negocios & Gestión
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Gestión operativa, modernización de negocios tradicionales y estrategia empresarial en LatAm.
+              </p>
+            </div>
+          </div>
+
+          <!-- 9. José Mendoza (Bolivia) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="international">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Bolivia">🇧🇴</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-amber-600 to-yellow-500 p-1 mb-4 mx-auto">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                JM
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">José Mendoza</h4>
+              <p class="text-xs text-amber-400 font-semibold mt-0.5">Fundador, Trabajito.com</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Empleo & Talento
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Plataformas de empleo, inserción laboral juvenil y vinculación directa de talento con empresas.
+              </p>
+            </div>
+          </div>
+
+          <!-- 10. Andrea Vivas (Venezuela) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="international">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-purple-500/10 text-purple-300 border border-purple-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="Venezuela">🇻🇪</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-purple-600 to-violet-500 p-1 mb-4 mx-auto">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                AV
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Andrea Vivas</h4>
+              <p class="text-xs text-purple-400 font-semibold mt-0.5">Fundadora, Bespoke Education</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Educación & Innovación
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Enseñanza del inglés como puente de oportunidades globales y metodologías activas.
+              </p>
+            </div>
+          </div>
+
+          <!-- 11. Jorge Escalante (El Salvador) -->
+          <div class="speaker-card glass-card glass-card-hover p-6 rounded-3xl border border-slate-800 relative overflow-hidden" data-category="international">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-mono">
+                YLAI Fellow
+              </span>
+              <span class="text-lg" title="El Salvador">🇸🇻</span>
+            </div>
+            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-cyan-600 to-teal-500 p-1 mb-4 mx-auto">
+              <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
+                JE
+              </div>
+            </div>
+            <div class="text-center">
+              <h4 class="text-lg font-bold text-white">Jorge Escalante</h4>
+              <p class="text-xs text-cyan-400 font-semibold mt-0.5">Fundador, Protolab Agency (El Salvador)</p>
+              <div class="my-2.5 inline-block text-[11px] px-2 py-0.5 rounded bg-white/[0.04] text-slate-300 border border-white/5 font-mono">
+                Marketing Digital & IA
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Automatización de ventas, marketing estratégico, herramientas digitales y crecimiento de agencias.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== ROL DE LOS YLAI ALUMNI ==================== -->
+    <section class="py-20 border-y border-slate-800/80 bg-polyglot-navy relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wider uppercase mb-3">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Ecosistema Colaborativo
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            🌎 YLAI Community of Impact
+          </h2>
+          <p class="mt-3 text-slate-400 text-sm sm:text-base">
+            Los Alumni no participan únicamente como expositores. Desempeñan 5 roles dinámicos para transformar la experiencia de cada asistente:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center hover:border-indigo-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="mic" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-white font-bold text-sm mb-1">Speakers</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Comparten conocimientos prácticos, marcos de trabajo y lecciones reales.
+            </p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center hover:border-purple-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="messages-square" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-white font-bold text-sm mb-1">Panelists</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Debaten en conversaciones sectoriales sobre retos y oportunidades en la región.
+            </p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center hover:border-cyan-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-white font-bold text-sm mb-1">Mentors</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Acompañan a los participantes seleccionados en el siguiente Bootcamp Lab.
+            </p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center hover:border-emerald-500/40 transition-colors">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-white font-bold text-sm mb-1">Facilitators</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Dinamizan las salas de networking entre jóvenes de distintos países.
+            </p>
+          </div>
+
+          <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center hover:border-amber-500/40 transition-colors sm:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-white font-bold text-sm mb-1">Connectors</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Abren puertas directas a oportunidades, recursos y contactos globales.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== GLOBAL NETWORKING EXPERIENCE ==================== -->
+    <section id="networking" class="py-24 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-card rounded-3xl p-8 sm:p-12 border border-indigo-500/30 relative overflow-hidden shadow-2xl">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-indigo-600/15 rounded-full blur-3xl"></div>
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs font-semibold tracking-wider uppercase">
+                <i data-lucide="globe-2" class="w-3.5 h-3.5"></i> Conexión Transfronteriza
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Espacios de Networking Internacional
+              </h2>
+              <p class="text-slate-300 text-base leading-relaxed">
+                El Forum está concebido para que <strong>cada asistente participe de forma protagónica</strong>. En las sesiones de Global Networking, abriremos salas virtuales donde podrás interactuar directamente con líderes y pares de toda la región.
+              </p>
+
+              <!-- Las 4 Preguntas Dinámicas -->
+              <div class="space-y-3 pt-2">
+                <h4 class="text-xs font-bold uppercase tracking-widest text-indigo-300">
+                  La Dinámica de Conexión Inmediata:
+                </h4>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <span class="text-indigo-400 font-bold text-xs block mb-1">1. ¿QUIÉN SOY?</span>
+                    <p class="text-xs text-slate-300">Tu nombre, ciudad/país y qué te mueve a liderar.</p>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <span class="text-purple-400 font-bold text-xs block mb-1">2. ¿QUÉ HAGO?</span>
+                    <p class="text-xs text-slate-300">Tu proyecto, emprendimiento o área de especialización.</p>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <span class="text-cyan-400 font-bold text-xs block mb-1">3. ¿QUÉ ESTOY BUSCANDO?</span>
+                    <p class="text-xs text-slate-300">Un mentor, un socio, un empleo remoto o clientes.</p>
+                  </div>
+                  <div class="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                    <span class="text-emerald-400 font-bold text-xs block mb-1">4. ¿QUÉ PUEDO APORTAR?</span>
+                    <p class="text-xs text-slate-300">Habilidades técnicas, idiomas, feedback o alianzas.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Countries Pill Selector -->
+              <div class="pt-4">
+                <span class="text-xs text-slate-400 block mb-2 font-medium">Países con presencia activa confirmada:</span>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-white font-medium text-xs flex items-center gap-1.5 border border-slate-700">
+                    <span>🇵🇪</span> Perú
+                  </span>
+                  <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-white font-medium text-xs flex items-center gap-1.5 border border-slate-700">
+                    <span>🇵🇦</span> Panamá
+                  </span>
+                  <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-white font-medium text-xs flex items-center gap-1.5 border border-slate-700">
+                    <span>🇨🇷</span> Costa Rica
+                  </span>
+                  <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-white font-medium text-xs flex items-center gap-1.5 border border-slate-700">
+                    <span>🇧🇴</span> Bolivia
+                  </span>
+                  <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-white font-medium text-xs flex items-center gap-1.5 border border-slate-700">
+                    <span>🇻🇪</span> Venezuela
+                  </span>
+                  <span class="px-3 py-1.5 rounded-lg bg-slate-800/80 text-white font-medium text-xs flex items-center gap-1.5 border border-slate-700">
+                    <span>🇸🇻/🇲🇽</span> El Salvador & México
+                  </span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Interactive Networking Simulation Box -->
+            <div class="lg:col-span-5">
+              <div class="bg-polyglot-deep p-6 rounded-2xl border border-indigo-500/20 shadow-xl">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-800 text-xs">
+                  <span class="text-white font-bold flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Simulador de Sala de Networking
+                  </span>
+                  <span class="text-indigo-400 font-mono">Breakout #03</span>
+                </div>
+
+                <div class="space-y-3 py-4">
+                  <!-- Mock participant 1 -->
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs">
+                    <div class="flex items-center justify-between text-slate-300 font-semibold mb-1">
+                      <span class="flex items-center gap-1.5 text-white">
+                        <span>🇵🇪</span> Diego M. (Lima, Perú)
+                      </span>
+                      <span class="text-[10px] text-indigo-400 font-mono">Buscando: Cofundador Tech</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px]">
+                      “Diseñador UX/UI con 4 años de experiencia en EdTech. Busco un desarrollador full-stack para postular a fondos de innovación.”
+                    </p>
+                  </div>
+
+                  <!-- Mock participant 2 -->
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs">
+                    <div class="flex items-center justify-between text-slate-300 font-semibold mb-1">
+                      <span class="flex items-center gap-1.5 text-white">
+                        <span>🇨🇷</span> Sofía V. (San José, Costa Rica)
+                      </span>
+                      <span class="text-[10px] text-emerald-400 font-mono">Aportando: Exp. en IA & Datos</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px]">
+                      “Científica de datos junior. Puedo aportar auditorías de modelos predictivos y automatizaciones en Python.”
+                    </p>
+                  </div>
+
+                  <!-- Mock participant 3 -->
+                  <div class="p-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs">
+                    <div class="flex items-center justify-between text-slate-300 font-semibold mb-1">
+                      <span class="flex items-center gap-1.5 text-white">
+                        <span>🇵🇦</span> Carlos R. (Ciudad de Panamá)
+                      </span>
+                      <span class="text-[10px] text-amber-400 font-mono">Buscando: Expansión en Perú</span>
+                    </div>
+                    <p class="text-slate-400 text-[11px]">
+                      “Tengo una startup de logística B2B y quiero conectar con distribuidores y aliados comerciales en Lima.”
+                    </p>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-800 text-center">
+                  <span class="text-xs text-indigo-300 font-medium">
+                    ⚡ ¿Listo para preparar tu pitch de 60 segundos?
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== CIERRE → BOOTCAMP LAB ==================== -->
+    <section id="bootcamp" class="py-24 bg-gradient-to-b from-polyglot-deep/80 to-polyglot-navy relative overflow-hidden">
+      <!-- Glow ambient -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[25rem] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold tracking-wider uppercase mb-3">
+            <i data-lucide="rocket" class="w-3.5 h-3.5"></i> El Siguiente Paso Estratégico
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            🚀 ¿Y AHORA QUÉ?
+          </h2>
+          <p class="mt-4 text-xl sm:text-2xl font-semibold text-amber-300">
+            OPPORTUNEUR BOOTCAMP LAB
+          </p>
+          <p class="mt-3 text-slate-400 text-base max-w-2xl mx-auto">
+            El Forum no termina con un simple “gracias por participar”. Es el inicio formal de un programa de formación y mentoría intensiva.
+          </p>
+        </div>
+
+        <!-- Forum vs Bootcamp Comparison Box -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
+          
+          <!-- Forum Card -->
+          <div class="glass-card p-8 rounded-3xl border border-indigo-500/30 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs uppercase font-extrabold tracking-wider text-indigo-400">FASE 1</span>
+              <h3 class="text-2xl font-bold text-white mt-1 mb-3">Impact Forum</h3>
+              <p class="text-sm font-semibold text-indigo-200 mb-6">
+                Inspiración + Conexiones Globales
+              </p>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                  <span>3 horas intensivas en vivo con YLAI Alumni.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                  <span>Acceso a las 5 áreas clave de contenido.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                  <span>Salas de networking con jóvenes de 6+ países.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-indigo-400 shrink-0 mt-0.5"></i>
+                  <span>Certificado oficial de participación.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="pt-6 mt-6 border-t border-slate-800 text-xs text-indigo-300 font-semibold">
+              ✓ Punto de partida para toda la comunidad
+            </div>
+          </div>
+
+          <!-- Bootcamp Lab Card -->
+          <div class="glass-card p-8 rounded-3xl border-2 border-amber-500/50 flex flex-col justify-between relative shadow-2xl shadow-amber-500/10 bg-amber-950/20">
+            <div class="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider">
+              30 Plazas Seleccionadas
+            </div>
+
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-6">
+                <i data-lucide="flame" class="w-6 h-6"></i>
+              </div>
+              <span class="text-xs uppercase font-extrabold tracking-wider text-amber-400">FASE 2</span>
+              <h3 class="text-2xl font-bold text-white mt-1 mb-3">Bootcamp Lab</h3>
+              <p class="text-sm font-semibold text-amber-200 mb-6">
+                Acción + Acompañamiento Personalizado
+              </p>
+              
+              <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Mentoría 1 a 1 con YLAI Alumni por proyecto.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Conversión de ideas en prototipos o agencias de servicios con IA.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Ruta de postulación a fondos internacionales y becas.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <i data-lucide="check" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+                  <span>Optimización de CV de exportación, LinkedIn y portafolios.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="pt-6 mt-6 border-t border-amber-500/30 text-xs text-amber-300 font-bold">
+              ★ Postulación prioritaria disponible para asistentes del Forum
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Closing Manifesto Quote -->
+        <div class="max-w-3xl mx-auto text-center p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+          <p class="text-base sm:text-lg text-slate-200 font-medium italic">
+            “Hoy conectamos talento. <br class="sm:hidden" />
+            En el Bootcamp Lab vamos a convertir esas conexiones en oportunidades reales.”
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ==================== OBJETIVOS & INDICADORES DE ÉXITO ==================== -->
+    <section class="py-24 bg-polyglot-deep/40 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wider uppercase">
+              <i data-lucide="line-chart" class="w-3.5 h-3.5"></i> Medición y Resultados
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+              Objetivos e Indicadores de Impacto
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Para garantizar que el forum trascienda la teoría, medimos métricas cuantitativas clave y, sobre todo, la tasa de conversión en oportunidades reales para los jóvenes.
+            </p>
+
+            <div class="p-6 rounded-2xl bg-indigo-950/40 border border-indigo-500/30">
+              <div class="flex items-center gap-3 mb-2">
+                <i data-lucide="lightbulb" class="w-5 h-5 text-amber-400"></i>
+                <h4 class="text-white font-bold text-sm">Opportunity Conversion Metric</h4>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                El indicador más potente de OPPORTUNEUR: número de participantes que tras el Forum logran una mentoría, amplían su red profesional, optimizan su CV/LinkedIn, inician un proyecto o ingresan al Bootcamp Lab.
+              </p>
+            </div>
+          </div>
+
+          <!-- KPI Metric Cards Grid -->
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center">
+                <span class="block text-3xl sm:text-4xl font-black text-indigo-400 font-mono">150</span>
+                <span class="text-xs font-semibold text-white mt-1 block">Inscritos Meta</span>
+                <span class="text-[11px] text-slate-400">Jóvenes de LatAm</span>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center">
+                <span class="block text-3xl sm:text-4xl font-black text-purple-400 font-mono">100+</span>
+                <span class="text-xs font-semibold text-white mt-1 block">Asistentes en Vivo</span>
+                <span class="text-[11px] text-slate-400">Participación activa</span>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center">
+                <span class="block text-3xl sm:text-4xl font-black text-cyan-400 font-mono">10+</span>
+                <span class="text-xs font-semibold text-white mt-1 block">Speakers & Panelists</span>
+                <span class="text-[11px] text-slate-400">YLAI Alumni</span>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center">
+                <span class="block text-3xl sm:text-4xl font-black text-emerald-400 font-mono">6+</span>
+                <span class="text-xs font-semibold text-white mt-1 block">Países Representados</span>
+                <span class="text-[11px] text-slate-400">Red Latinoamericana</span>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center">
+                <span class="block text-3xl sm:text-4xl font-black text-amber-400 font-mono">30</span>
+                <span class="text-xs font-semibold text-white mt-1 block">Seleccionados Bootcamp</span>
+                <span class="text-[11px] text-slate-400">Acompañamiento 1 a 1</span>
+              </div>
+
+              <div class="glass-card p-5 rounded-2xl border border-slate-800 text-center">
+                <span class="block text-3xl sm:text-4xl font-black text-rose-400 font-mono">80%+</span>
+                <span class="text-xs font-semibold text-white mt-1 block">Satisfacción Neta</span>
+                <span class="text-[11px] text-slate-400">Encuesta post-evento</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== FORMULARIO DE REGISTRO & PASE VIRTUAL ==================== -->
+    <section id="registro" class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-4xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border border-indigo-500/40 relative shadow-2xl">
+          <div class="absolute -top-24 -left-24 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-semibold tracking-wider uppercase mb-3">
+              <i data-lucide="ticket" class="w-3.5 h-3.5"></i> Registro Gratuito Oficial
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+              Asegura tu Cupo para el Forum 2026
+            </h2>
+            <p class="mt-2 text-slate-400 text-sm">
+              Completa tus datos para recibir tu credencial virtual inmediata, los enlaces de acceso y postulación prioritaria al Bootcamp Lab.
+            </p>
+          </div>
+
+          <!-- Registration Form -->
+          <form id="registrationForm" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              
+              <div>
+                <label for="fullName" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                  Nombre Completo *
+                </label>
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  required 
+                  placeholder="Ej. Camila Morales Ríos" 
+                  class="w-full px-4 py-3 rounded-xl bg-polyglot-deep border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                  Correo Electrónico *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  placeholder="nombre@correo.com" 
+                  class="w-full px-4 py-3 rounded-xl bg-polyglot-deep border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                />
+              </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              
+              <div>
+                <label for="country" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                  País de Residencia *
+                </label>
+                <select 
+                  id="country" 
+                  name="country" 
+                  required 
+                  class="w-full px-4 py-3 rounded-xl bg-polyglot-deep border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                >
+                  <option value="Perú" selected>🇵🇪 Perú</option>
+                  <option value="Panamá">🇵🇦 Panamá</option>
+                  <option value="Costa Rica">🇨🇷 Costa Rica</option>
+                  <option value="Bolivia">🇧🇴 Bolivia</option>
+                  <option value="Venezuela">🇻🇪 Venezuela</option>
+                  <option value="El Salvador">🇸🇻 El Salvador</option>
+                  <option value="México">🇲🇽 México</option>
+                  <option value="Colombia">🇨🇴 Colombia</option>
+                  <option value="Chile">🇨🇱 Chile</option>
+                  <option value="Argentina">🇦🇷 Argentina</option>
+                  <option value="Ecuador">🇪🇨 Ecuador</option>
+                  <option value="Otro">🌎 Otro país</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="roleType" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                  ¿Cuál es tu perfil actual? *
+                </label>
+                <select 
+                  id="roleType" 
+                  name="roleType" 
+                  required 
+                  class="w-full px-4 py-3 rounded-xl bg-polyglot-deep border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                >
+                  <option value="Emprendedor / Fundador">Emprendedor(a) / Fundador(a)</option>
+                  <option value="Joven Profesional">Joven Profesional</option>
+                  <option value="Estudiante Universitario">Estudiante Universitario / Líder juvenil</option>
+                  <option value="Freelancer / Profesional Digital">Freelancer / Profesional Digital</option>
+                  <option value="Investigador / Social">Líder Social o Comunitario</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="mainInterest" class="block text-xs font-semibold text-slate-300 mb-1.5">
+                  Área de Mayor Interés *
+                </label>
+                <select 
+                  id="mainInterest" 
+                  name="mainInterest" 
+                  required 
+                  class="w-full px-4 py-3 rounded-xl bg-polyglot-deep border border-slate-700 text-white text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                >
+                  <option value="IA & Futuro del Trabajo">🔵 IA & Futuro del Trabajo</option>
+                  <option value="Empleabilidad & Talento Global">🟠 Empleabilidad & Trabajo Remoto</option>
+                  <option value="Emprendimiento & Negocios">🟢 Emprendimiento & Negocios</option>
+                  <option value="Liderazgo & Impacto">🟣 Liderazgo con Propósito</option>
+                  <option value="Global Networking">🌎 Global Networking</option>
+                  <option value="Bootcamp Lab">🚀 Postulación al Bootcamp Lab</option>
+                </select>
+              </div>
+
+            </div>
+
+            <!-- Bootcamp Checkbox -->
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
+              <input 
+                type="checkbox" 
+                id="applyBootcamp" 
+                name="applyBootcamp" 
+                checked 
+                class="mt-1 h-4 w-4 rounded border-amber-400 text-amber-500 focus:ring-amber-500 bg-polyglot-deep"
+              />
+              <label for="applyBootcamp" class="text-xs text-slate-300">
+                <strong class="text-amber-300">Deseo postular prioritariamente a una de las 30 plazas del OPPORTUNEUR BOOTCAMP LAB</strong> (Acompañamiento, mentoría 1 a 1 y seguimiento de proyectos con YLAI Alumni).
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-2 text-center">
+              <button 
+                type="submit" 
+                class="w-full sm:w-auto px-10 py-4 rounded-xl btn-gradient-polyglot text-white font-bold text-base flex items-center justify-center gap-2 mx-auto cursor-pointer"
+              >
+                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                <span>Completar Inscripción & Generar Credencial</span>
+              </button>
+              <p class="text-[11px] text-slate-400 mt-3">
+                🔒 Evento 100% gratuito. No compartimos tus datos con terceros.
+              </p>
+            </div>
+          </form>
+
+          <!-- VIRTUAL TICKET GENERATED DISPLAY (Hidden by default, shown upon submit) -->
+          <div id="ticketContainer" class="hidden mt-10 pt-8 border-t border-slate-800">
+            <div class="text-center mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold border border-emerald-500/30">
+                <i data-lucide="check" class="w-4 h-4"></i> ¡INSCRIPCIÓN EXITOSA CONFIRMADA!
+              </span>
+              <h3 class="text-xl sm:text-2xl font-bold text-white mt-2">Tu Credencial Oficial de Acceso</h3>
+              <p class="text-xs text-slate-400">Guarda o captura esta credencial para el día del evento.</p>
+            </div>
+
+            <!-- Visual Pass Card -->
+            <div class="max-w-md mx-auto bg-gradient-to-br from-indigo-950 via-polyglot-deep to-purple-950 p-6 rounded-3xl border-2 border-indigo-500/50 shadow-2xl relative overflow-hidden text-left">
+              <div class="absolute -right-12 -top-12 w-32 h-32 bg-indigo-500/20 rounded-full blur-2xl"></div>
+
+              <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                <div class="flex items-center gap-2.5">
+                  <img src="assets/logo-polyglot.png" alt="Polyglot Map" class="w-8 h-8 object-contain" />
+                  <div>
+                    <h5 class="text-white font-black text-sm tracking-tight">OPPORTUNEUR FORUM</h5>
+                    <span class="text-[10px] text-indigo-300 font-mono">EDICIÓN INTERNACIONAL 2026</span>
+                  </div>
+                </div>
+                <span class="text-xs px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono font-bold border border-emerald-500/30">
+                  PASS ACTIVO
+                </span>
+              </div>
+
+              <div class="py-5 space-y-4">
+                <div>
+                  <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">PARTICIPANTE</span>
+                  <h4 id="ticketName" class="text-lg font-black text-white">Camila Morales Ríos</h4>
+                  <span id="ticketRoleCountry" class="text-xs text-indigo-300 font-medium">Joven Profesional • 🇵🇪 Perú</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 text-xs">
+                  <div>
+                    <span class="text-[10px] uppercase text-slate-400 block font-semibold">FECHA & HORA</span>
+                    <span class="text-white font-bold">7 Nov 2026</span>
+                    <span class="text-slate-400 block text-[11px]">4:00 PM (PET)</span>
+                  </div>
+                  <div>
+                    <span class="text-[10px] uppercase text-slate-400 block font-semibold">ACCESO VIRTUAL</span>
+                    <span class="text-white font-bold">Zoom HD Live</span>
+                    <span class="text-slate-400 block text-[11px]">Plenaria + Breakouts</span>
+                  </div>
+                </div>
+
+                <div class="pt-2">
+                  <span class="text-[10px] uppercase text-slate-400 block font-semibold">TICKET ID</span>
+                  <span id="ticketId" class="text-xs text-amber-300 font-mono font-bold">OPP-2026-8492</span>
+                </div>
+              </div>
+
+              <!-- Sponsors in Ticket -->
+              <div class="pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400 gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-[9px] uppercase tracking-wider text-slate-400 font-semibold">SPONSORS:</span>
+                  <div class="flex items-center gap-1.5">
+                    <div class="h-5 px-1.5 py-0.5 rounded bg-white flex items-center justify-center" title="U.S. Department of State">
+                      <img src="assets/ally-usembassy.png" alt="U.S. Dept of State" class="h-3.5 w-auto object-contain" />
+                    </div>
+                    <div class="h-5 px-1.5 py-0.5 rounded bg-white flex items-center justify-center" title="YLAI Program">
+                      <img src="assets/ally-ylai.png" alt="YLAI Program" class="h-3 w-auto object-contain" />
+                    </div>
+                  </div>
+                </div>
+                <span class="text-white font-mono text-[10px]">#TalentEverywhere</span>
+              </div>
+            </div>
+
+            <!-- Actions after registration -->
+            <div class="flex flex-wrap items-center justify-center gap-3 mt-6">
+              <a 
+                id="addToCalendarBtn"
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=OPPORTUNEUR+IMPACT+FORUM+2026&dates=20261107T210000Z/20261108T000000Z&details=Un+espacio+internacional+para+conectar+talento+joven+de+Latinoamérica+con+conocimiento,+herramientas+y+oportunidades+globales.+Organiza:+Polyglot+Map+y+YLAI+Alumni.&location=Virtual+Zoom" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs inline-flex items-center gap-2 border border-slate-700 transition-colors"
+              >
+                <i data-lucide="calendar-plus" class="w-4 h-4 text-indigo-400"></i>
+                <span>Añadir a Google Calendar</span>
+              </a>
+
+              <button 
+                onclick="window.print()" 
+                class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs inline-flex items-center gap-2 border border-slate-700 transition-colors"
+              >
+                <i data-lucide="printer" class="w-4 h-4 text-purple-400"></i>
+                <span>Imprimir / Guardar PDF</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== POSICIONAMIENTO FINAL ==================== -->
+    <section class="py-20 border-t border-slate-800 bg-polyglot-navy text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="w-16 h-16 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mx-auto mb-6 border border-indigo-500/30">
+          <i data-lucide="globe" class="w-8 h-8"></i>
+        </div>
+
+        <h3 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-4">
+          Empowering talent. Unlocking global opportunities.
+        </h3>
+        
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl mx-auto mb-8">
+          <strong>OPPORTUNEUR IMPACT FORUM</strong> es el punto de encuentro donde el talento joven y la experiencia de líderes latinoamericanos se unen para construir soluciones de impacto, emprendimientos sostenibles y oportunidades sin límites.
+        </p>
+
+        <a href="#registro" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl btn-gradient-polyglot text-white font-bold text-sm">
+          <span>Únete a la Comunidad OPPORTUNEUR</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-polyglot-deep border-t border-slate-800/80 pt-16 pb-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo-polyglot.png" alt="Polyglot Map" class="w-9 h-9 object-contain" />
+            <div>
+              <span class="font-black text-white text-base tracking-tight block">POLYGLOT MAP</span>
+              <span class="text-[11px] text-indigo-300">Academia Global & Innovación de Talento</span>
+            </div>
+          </div>
+          <p class="text-slate-400 leading-relaxed text-xs max-w-md">
+            Plataforma y comunidad internacional basada en Lima, Perú, dedicada al desarrollo de idiomas, habilidades de empleabilidad global y conexiones estratégicas para profesionales de toda la región.
+          </p>
+          <div class="flex items-center gap-4 text-slate-400 text-xs pt-1">
+            <span class="flex items-center gap-1.5"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-indigo-400"></i> Lima, Perú</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="mail" class="w-3.5 h-3.5 text-indigo-400"></i> contacto@polyglotmap.com</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Enlaces Rápidos -->
+        <div class="space-y-2">
+          <h5 class="text-white font-bold text-sm mb-3">Navegación</h5>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#concepto" class="hover:text-white transition-colors">Concepto & Manifiesto</a></li>
+            <li><a href="#sponsors" class="hover:text-white transition-colors text-indigo-300">Sponsors & Aliados</a></li>
+            <li><a href="#areas" class="hover:text-white transition-colors">5 Áreas del Forum</a></li>
+            <li><a href="#agenda" class="hover:text-white transition-colors">Agenda General</a></li>
+            <li><a href="#speakers" class="hover:text-white transition-colors">Speakers & Panelistas</a></li>
+            <li><a href="#bootcamp" class="hover:text-white transition-colors text-amber-400">Bootcamp Lab 2026</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Aliados & Comunidad -->
+        <div class="space-y-2">
+          <h5 class="text-white font-bold text-sm mb-3">Comunidad & Aliados</h5>
+          <ul class="space-y-2 text-slate-400">
+            <li>Young Leaders of the Americas (YLAI)</li>
+            <li>SPLENDIA Community</li>
+            <li>Red de Becarios & Fulbright Alumni</li>
+            <li>Bootcamp Lab Perú & LatAm</li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Sponsors Oficiales -->
+        <div class="space-y-3">
+          <h5 class="text-white font-bold text-sm mb-3">Con el apoyo de</h5>
+          <p class="text-[11px] text-slate-400">
+            Respaldo institucional oficial para el desarrollo del talento joven en Latinoamérica:
+          </p>
+          <div class="flex flex-col gap-2 pt-1">
+            <a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors">
+              <div class="h-7 w-7 rounded-lg bg-white p-0.5 flex items-center justify-center shrink-0">
+                <img src="assets/ally-usembassy.png" alt="U.S. Dept of State" class="h-6 w-auto object-contain" />
+              </div>
+              <div class="text-[11px]">
+                <span class="text-white font-semibold block">U.S. Department of State</span>
+                <span class="text-slate-400 text-[10px]">state.gov</span>
+              </div>
+            </a>
+            <a href="https://ylai.state.gov/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/5 transition-colors">
+              <div class="h-7 w-7 rounded-lg bg-white p-0.5 flex items-center justify-center shrink-0">
+                <img src="assets/ally-ylai.png" alt="YLAI Program" class="h-5 w-auto object-contain" />
+              </div>
+              <div class="text-[11px]">
+                <span class="text-white font-semibold block">YLAI Program</span>
+                <span class="text-slate-400 text-[10px]">ylai.state.gov</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+        <div>
+          © 2026 <strong class="text-slate-300">Polyglot Map</strong>. Todos los derechos reservados. Liderado por Melanie Teresa Almeyda Poicón & Nataly Napanga.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://polyglotmap.com" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">
+            polyglotmap.com
+          </a>
+          <span>•</span>
+          <span>Talent is everywhere. Opportunities are not.</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on clicking any navigation link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // COUNTDOWN TIMER TO NOVEMBER 7, 2026 - 16:00 PET (UTC-5)
+    function startCountdown() {
+      // Event date: Nov 7, 2026 16:00:00 PET (GMT-5) -> 21:00:00 UTC
+      const eventDate = new Date('2026-11-07T16:00:00-05:00').getTime();
+
+      function updateTimer() {
+        const now = new Date().getTime();
+        const diff = eventDate - now;
+
+        if (diff <= 0) {
+          document.getElementById('days').innerText = '00';
+          document.getElementById('hours').innerText = '00';
+          document.getElementById('minutes').innerText = '00';
+          document.getElementById('seconds').innerText = '00';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    }
+    startCountdown();
+
+    // SPEAKERS FILTER TABS
+    const filterBtns = document.querySelectorAll('.speaker-filter-btn');
+    const speakerCards = document.querySelectorAll('.speaker-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Toggle active button style
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-indigo-600', 'text-white', 'shadow-lg', 'shadow-indigo-600/30');
+          b.classList.add('glass-card', 'text-slate-300');
+        });
+        btn.classList.add('bg-indigo-600', 'text-white', 'shadow-lg', 'shadow-indigo-600/30');
+        btn.classList.remove('glass-card', 'text-slate-300');
+
+        const filter = btn.getAttribute('data-filter');
+
+        speakerCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // REGISTRATION FORM & VIRTUAL TICKET GENERATION
+    const registrationForm = document.getElementById('registrationForm');
+    const ticketContainer = document.getElementById('ticketContainer');
+    const ticketName = document.getElementById('ticketName');
+    const ticketRoleCountry = document.getElementById('ticketRoleCountry');
+    const ticketId = document.getElementById('ticketId');
+
+    registrationForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName').value.trim();
+      const country = document.getElementById('country').value;
+      const roleType = document.getElementById('roleType').value;
+
+      // Populate ticket
+      ticketName.innerText = fullName || 'Participante';
+      ticketRoleCountry.innerText = `${roleType} • ${country}`;
+      
+      // Generate random ticket ID
+      const randomNum = Math.floor(1000 + Math.random() * 9000);
+      ticketId.innerText = `OPP-2026-${randomNum}`;
+
+      // Show ticket container with animation
+      ticketContainer.classList.remove('hidden');
+      ticketContainer.scrollIntoView({ behavior: 'smooth' });
+
+      // Trigger Celebration Confetti
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      } catch (err) {
+        console.log('Confetti effect');
+      }
+    });
+  </script>
+
+</body>
+</html>
