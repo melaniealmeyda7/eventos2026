@@ -1269,7 +1269,7 @@
           <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border-2 border-amber-400/90 shadow-xl shadow-amber-500/20 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/35 hover:-translate-y-2"
                data-category="special peru all"
                onclick="openSpeakerSideDrawer('cristian-gutierrez')">
-            <img src="assets/speaker-cristian-gutierrez.jpg" alt="Cristian Gutiérrez - RONIN" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <img src="assets/speaker-cristian-gutierrez.jpg" alt="Cristian Gutiérrez - RONIN" class="absolute inset-0 w-full h-full object-cover object-[53%_15%] scale-110 translate-y-3.5 group-hover:scale-115 transition-transform duration-500 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
             <!-- Top Badges -->
@@ -3309,24 +3309,34 @@
       if (speaker.customType === 'ronin') {
         heroPhotoHtml = `
           <div class="rounded-2xl bg-slate-900/80 p-4 border border-amber-500/30">
-            <div class="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center">
-              <img id="drawerRoninHeroImg" src="${speaker.photo}" alt="${speaker.name}" class="h-full w-full object-cover transition-all duration-300" />
-              <div id="drawerRoninCaption" class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/70 to-transparent p-3 text-xs text-white font-medium text-center">
+            <div class="relative h-72 sm:h-84 w-full rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center border border-white/5">
+              <img id="drawerRoninHeroBg" src="${speaker.photo}" alt="" class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-30 scale-110 pointer-events-none transition-all duration-300" />
+              <img id="drawerRoninHeroImg" src="${speaker.photo}" alt="${speaker.name}" class="relative z-10 h-full w-full object-contain transition-all duration-300 py-1.5" />
+              <div id="drawerRoninCaption" class="absolute bottom-0 inset-x-0 z-20 bg-gradient-to-t from-slate-950/95 via-slate-950/80 to-transparent p-3 pt-6 text-xs text-white font-medium text-center drop-shadow">
                 Cristian Gutiérrez: Fundador de RONIN, YLAI Fellow 2016 y profesor en UTEC
               </div>
             </div>
             <div class="grid grid-cols-3 gap-2 mt-3">
-              <button type="button" onclick="switchDrawerRoninPhoto('assets/speaker-cristian-gutierrez.jpg', 'Cristian Gutiérrez: Fundador de RONIN, YLAI Fellow 2016 y profesor en UTEC', this)" class="drawer-thumb-btn p-2 rounded-xl border-2 border-amber-400 bg-amber-500/10 text-left transition-all">
-                <span class="text-[10px] font-bold text-amber-300 block">01 • Fundador</span>
-                <span class="text-[11px] text-slate-300 truncate block">Cristian Gutiérrez</span>
+              <button type="button" onclick="switchDrawerRoninPhoto('assets/speaker-cristian-gutierrez.jpg', 'Cristian Gutiérrez: Fundador de RONIN, YLAI Fellow 2016 y profesor en UTEC', this)" class="drawer-thumb-btn p-1.5 rounded-xl border-2 border-amber-400 bg-amber-500/10 flex items-center gap-2 text-left transition-all">
+                <img src="assets/speaker-cristian-gutierrez.jpg" class="w-9 h-9 rounded-lg object-cover object-[53%_20%] shrink-0 border border-white/20" alt="Cristian" />
+                <div class="min-w-0">
+                  <span class="text-[10px] font-bold text-amber-300 block truncate">01 • Fundador</span>
+                  <span class="text-[10px] text-slate-300 truncate block">Cristian G.</span>
+                </div>
               </button>
-              <button type="button" onclick="switchDrawerRoninPhoto('assets/ronin-futbol7.jpg', 'Primera zapatilla de fútbol 7 del Perú con suela de caucho silvestre amazónico', this)" class="drawer-thumb-btn p-2 rounded-xl border border-slate-700 bg-white/[0.02] text-left hover:border-slate-500 transition-all">
-                <span class="text-[10px] font-bold text-slate-400 block">02 • Fútbol 7</span>
-                <span class="text-[11px] text-slate-300 truncate block">Suela Amazónica</span>
+              <button type="button" onclick="switchDrawerRoninPhoto('assets/ronin-futbol7.jpg', 'Primera zapatilla de fútbol 7 del Perú con suela de caucho silvestre amazónico', this)" class="drawer-thumb-btn p-1.5 rounded-xl border border-slate-700 bg-white/[0.02] flex items-center gap-2 text-left hover:border-slate-500 transition-all">
+                <img src="assets/ronin-futbol7.jpg" class="w-9 h-9 rounded-lg object-cover object-top shrink-0 border border-white/20" alt="Fútbol 7" />
+                <div class="min-w-0">
+                  <span class="text-[10px] font-bold text-slate-400 block truncate">02 • Fútbol 7</span>
+                  <span class="text-[10px] text-slate-300 truncate block">Suela Amazónica</span>
+                </div>
               </button>
-              <button type="button" onclick="switchDrawerRoninPhoto('assets/ronin-forest.jpg', 'Zapatilla urbana Forest: diseño contemporáneo con biocompuestos del bosque', this)" class="drawer-thumb-btn p-2 rounded-xl border border-slate-700 bg-white/[0.02] text-left hover:border-slate-500 transition-all">
-                <span class="text-[10px] font-bold text-slate-400 block">03 • Forest</span>
-                <span class="text-[11px] text-slate-300 truncate block">Biomateriales</span>
+              <button type="button" onclick="switchDrawerRoninPhoto('assets/ronin-forest.jpg', 'Zapatilla urbana Forest: diseño contemporáneo con biocompuestos del bosque', this)" class="drawer-thumb-btn p-1.5 rounded-xl border border-slate-700 bg-white/[0.02] flex items-center gap-2 text-left hover:border-slate-500 transition-all">
+                <img src="assets/ronin-forest.jpg" class="w-9 h-9 rounded-lg object-cover object-top shrink-0 border border-white/20" alt="Forest" />
+                <div class="min-w-0">
+                  <span class="text-[10px] font-bold text-slate-400 block truncate">03 • Forest</span>
+                  <span class="text-[10px] text-slate-300 truncate block">Biomateriales</span>
+                </div>
               </button>
             </div>
           </div>
@@ -3489,12 +3499,16 @@
 
     function switchDrawerRoninPhoto(src, caption, btn) {
       const img = document.getElementById('drawerRoninHeroImg');
+      const bg = document.getElementById('drawerRoninHeroBg');
       const cap = document.getElementById('drawerRoninCaption');
       if (img) {
         img.style.opacity = '0.3';
+        if (bg) bg.style.opacity = '0.1';
         setTimeout(() => {
           img.src = src;
+          if (bg) bg.src = src;
           img.style.opacity = '1';
+          if (bg) bg.style.opacity = '0.3';
         }, 120);
       }
       if (cap) cap.innerText = caption;
