@@ -233,6 +233,12 @@
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-3">
+        <!-- Language Switcher -->
+        <a href="en.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-bold text-slate-300 hover:text-white transition-all group" title="Switch to English version">
+          <span class="text-sm">🇺🇸</span>
+          <span class="font-mono">EN</span>
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-indigo-400 group-hover:rotate-45 transition-transform"></i>
+        </a>
         <a href="#registro" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-gradient-polyglot text-white font-semibold text-sm shadow-md">
           <i data-lucide="ticket" class="w-4 h-4"></i>
           <span>Registrarme Gratis</span>
@@ -253,7 +259,12 @@
       <a href="#speakers" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Speakers</a>
       <a href="#networking" class="block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Networking</a>
       <a href="#bootcamp" class="block px-3 py-2 rounded-lg text-amber-300 font-semibold hover:bg-white/5">Bootcamp Lab</a>
-      <div class="pt-2">
+      <div class="pt-2 flex items-center gap-2">
+        <a href="en.html" class="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 text-xs font-bold">
+          <span>🇺🇸 Switch to English</span>
+        </a>
+      </div>
+      <div class="pt-1">
         <a href="#registro" class="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl btn-gradient-polyglot text-white font-semibold text-sm">
           <i data-lucide="ticket" class="w-4 h-4"></i>
           <span>Registrarme Gratis</span>
@@ -1624,7 +1635,7 @@
           <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-purple-500/50 shadow-lg shadow-purple-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2 bg-slate-900"
                data-category="international all"
                onclick="openSpeakerSideDrawer('andrea-vivas')">
-            <img src="assets/speaker-andrea-vivas.png" alt="Andrea Vivas - Bespoke Education" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <img src="assets/speaker-andrea-vivas.png" alt="Andrea Vivas - Bespoke Education" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
             <!-- Top Badges -->
@@ -3251,7 +3262,7 @@
         badgeIcon: "languages",
         badgeClass: "bg-purple-500/20 text-purple-300 border border-purple-500/30",
         photo: "assets/speaker-andrea-vivas.png",
-        imgPos: "top",
+        imgPos: "center",
         gradient: "from-purple-500 to-violet-500",
         panelInfo: {
           badge: "🟡 PANEL 4 — EMPLEABILIDAD & TALENTO GLOBAL",
