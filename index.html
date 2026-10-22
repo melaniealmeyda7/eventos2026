@@ -1219,538 +1219,418 @@
           </div>
         </div>
 
-        <!-- Speakers Grid (Peru Business Fest Style) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="speakersGrid">
+        <!-- Speakers Grid (Peru Business Fest Exact Style) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6" id="speakersGrid">
 
           <!-- 1. Melanie Almeyda (Directora General del Evento / Invitada Especial / Perú) -->
-          <div class="speaker-card sm:col-span-2 lg:col-span-3 xl:col-span-4 flex justify-center w-full mb-2" data-category="special leaders peru all">
-            <div onclick="openSpeakerSideDrawer('melanie-almeyda')" class="group glass-card glass-card-hover p-6 sm:p-7 rounded-3xl border-2 border-amber-400/80 max-w-lg w-full relative overflow-hidden bg-gradient-to-b from-amber-500/[0.12] via-polyglot-card to-polyglot-card shadow-2xl shadow-amber-500/20 ring-1 ring-amber-400/40 text-center transition-all duration-300 hover:-translate-y-1.5 cursor-pointer">
-              
-              <!-- Glow decorativo superior -->
-              <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-48 h-20 bg-amber-500/20 blur-2xl rounded-full pointer-events-none"></div>
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border-2 border-amber-400/90 shadow-xl shadow-amber-500/20 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/35 hover:-translate-y-2"
+               data-category="special leaders peru all"
+               onclick="openSpeakerSideDrawer('melanie-almeyda')">
+            <img src="assets/speaker-melanie-almeyda.jpg" alt="Melanie Almeyda - Directora General del Evento" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="flex items-center justify-between mb-4 relative z-10">
-                <span class="inline-flex items-center gap-1.5 text-xs font-black px-3.5 py-1 rounded-full bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-300 border border-amber-400/50 shadow-sm shadow-amber-500/20">
-                  <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-400 fill-amber-400"></i> DIRECTORA GENERAL DEL EVENTO
-                </span>
-                <span class="text-sm font-semibold text-slate-300 flex items-center gap-1.5" title="Perú">
-                  <span class="text-lg">🇵🇪</span> <span>Perú</span>
-                </span>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-black px-3 py-1 rounded-full bg-amber-500/30 text-amber-300 border border-amber-400/60 backdrop-blur-md shadow-md">
+                <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-400 fill-amber-400"></i> DIRECTORA GENERAL
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
+            </div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-xl shadow-amber-500/30 bg-gradient-to-tr from-amber-400 via-orange-500 to-yellow-400 overflow-hidden ring-2 ring-amber-400/50">
-                  <img src="assets/speaker-melanie-almeyda.jpg" alt="Melanie Almeyda - Directora General del Evento" class="w-full h-full object-cover object-center rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-amber-400 text-[10px] font-black text-amber-300 shadow-md">
-                  Keynote
-                </div>
-              </div>
-
-              <div class="relative z-10">
-                <h4 class="text-2xl font-black text-white group-hover:text-amber-300 transition-colors">Melanie Almeyda</h4>
-                <p class="text-xs text-amber-300 font-extrabold mt-1 uppercase tracking-wide">Directora General del Evento</p>
-                <div class="inline-flex items-center gap-1.5 mt-1 px-3 py-0.5 rounded-full bg-white/5 border border-white/10 text-xs text-slate-300 font-medium">
-                  <span>Fundadora & CEO, Polyglot Map</span>
-                  <span>•</span>
-                  <span class="text-amber-300 font-semibold">YLAI Fellow 2026</span>
-                </div>
-                
-                <div class="my-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 font-mono font-semibold text-xs">
-                  <i data-lucide="mic" class="w-3.5 h-3.5"></i>
-                  <span>Apertura Oficial & Keynote Magistral</span>
-                </div>
-                
-                <p class="text-xs text-slate-300 mt-1 leading-relaxed max-w-sm mx-auto">
-                  Líder impulsando la transformación digital, idiomas para movilidad internacional, empleabilidad global y conexiones estratégicas junto al Dpto. de Estado de EE. UU.
-                </p>
-
-                <div class="mt-4 pt-3 border-t border-amber-500/20 flex items-center justify-center gap-2 text-xs text-amber-400 group-hover:text-amber-300 font-bold">
-                  <span>Ver biografía y detalles en el panel lateral</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
-                </div>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-amber-300 transition-colors drop-shadow-md">
+                MELANIE ALMEYDA
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Directora General • Fundadora Polyglot Map
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-amber-300/90 pt-2 border-t border-white/20">
+                <span>YLAI Fellow 2026 • Keynote</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
             </div>
           </div>
 
           <!-- 2. Cristian Gutiérrez (Invitado Especial / RONIN / Perú) -->
-          <div class="speaker-card group glass-card hover:border-amber-400/80 p-5 rounded-3xl relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20 border-2 border-amber-400/60 bg-gradient-to-b from-amber-500/[0.1] via-polyglot-card to-polyglot-card"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border-2 border-amber-400/90 shadow-xl shadow-amber-500/20 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/35 hover:-translate-y-2"
                data-category="special peru all"
                onclick="openSpeakerSideDrawer('cristian-gutierrez')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="inline-flex items-center gap-1.5 text-[11px] font-black px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-300 border border-amber-400/50 shadow-sm shadow-amber-500/20">
-                  <i data-lucide="star" class="w-3 h-3 text-amber-400 fill-amber-400"></i> INVITADO ESPECIAL
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Perú">
-                  <span class="text-base">🇵🇪</span> PE
-                </span>
-              </div>
+            <img src="assets/speaker-cristian-gutierrez.jpg" alt="Cristian Gutiérrez - RONIN" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-xl shadow-amber-500/25 bg-gradient-to-tr from-amber-400 via-orange-500 to-yellow-400 overflow-hidden ring-2 ring-amber-400/40">
-                  <img src="assets/speaker-cristian-gutierrez.jpg" alt="Cristian Gutiérrez - RONIN" class="w-full h-full object-cover object-center rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-amber-400 text-[10px] font-black text-amber-300 shadow-md">
-                  RONIN
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition-colors">Cristian Gutiérrez</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-[11px] font-bold text-amber-300">
-                  <span>Fundador & CEO • RONIN</span>
-                </div>
-                <p class="text-xs text-slate-300 font-medium mt-2 line-clamp-2 leading-relaxed">
-                  Calzado y biomateriales amazónicos con caucho silvestre del río Pichis. Misión: bosque en pie.
-                </p>
-                <div class="mt-2 text-[11px] font-mono font-semibold text-amber-200/90">
-                  🏆 Ganador Kunan 2026 • YLAI 2016
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-black px-3 py-1 rounded-full bg-amber-500/30 text-amber-300 border border-amber-400/60 backdrop-blur-md shadow-md">
+                <i data-lucide="star" class="w-3.5 h-3.5 text-amber-400 fill-amber-400"></i> INVITADO ESPECIAL
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-amber-500/20 flex items-center justify-between text-xs text-amber-400 group-hover:text-amber-300 font-bold">
-              <span>Ver caso RONIN & fotos</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-amber-300 transition-colors drop-shadow-md">
+                CRISTIAN GUTIÉRREZ
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Fundador & CEO RONIN • Profesor UTEC
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-amber-300/90 pt-2 border-t border-white/20">
+                <span>🏆 Kunan 2026 • YLAI 2016</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 3. María Gracia Agurto (Invitada Especial / Golden Circle / Perú) -->
-          <div class="speaker-card group glass-card hover:border-amber-400/80 p-5 rounded-3xl relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20 border-2 border-amber-400/60 bg-gradient-to-b from-amber-500/[0.1] via-polyglot-card to-polyglot-card"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border-2 border-amber-400/90 shadow-xl shadow-amber-500/20 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/35 hover:-translate-y-2"
                data-category="special peru all"
                onclick="openSpeakerSideDrawer('maria-gracia')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="inline-flex items-center gap-1.5 text-[11px] font-black px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500/30 to-orange-500/30 text-amber-300 border border-amber-400/50 shadow-sm shadow-amber-500/20">
-                  <i data-lucide="star" class="w-3 h-3 text-amber-400 fill-amber-400"></i> INVITADA ESPECIAL
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Perú">
-                  <span class="text-base">🇵🇪</span> PE
-                </span>
-              </div>
+            <img src="assets/speaker-maria-gracia.jpg" alt="María Gracia Agurto - Golden Circle" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-xl shadow-amber-500/25 bg-gradient-to-tr from-amber-400 via-orange-500 to-yellow-400 overflow-hidden ring-2 ring-amber-400/40">
-                  <img src="assets/speaker-maria-gracia.jpg" alt="María Gracia Agurto - Golden Circle" class="w-full h-full object-cover object-center rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full p-0.5 bg-slate-950 border-2 border-amber-400 shadow-md">
-                  <img src="assets/logo-golden-circle.png" alt="Golden Circle" class="w-full h-full object-contain rounded-full" />
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-black text-white group-hover:text-amber-300 transition-colors">María Gracia Agurto</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-[11px] font-bold text-amber-300">
-                  <span>CEO • Golden Circle (Miami)</span>
-                </div>
-                <p class="text-xs text-slate-300 font-medium mt-2 line-clamp-2 leading-relaxed">
-                  Inversionista ángel y especialista en Venture Capital & Investment Readiness.
-                </p>
-                <div class="mt-2 text-[11px] font-mono font-semibold text-amber-200/90">
-                  +$7M Levantados • Fellow U.S. Dept State
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-black px-3 py-1 rounded-full bg-amber-500/30 text-amber-300 border border-amber-400/60 backdrop-blur-md shadow-md">
+                <i data-lucide="star" class="w-3.5 h-3.5 text-amber-400 fill-amber-400"></i> INVITADA ESPECIAL
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-amber-500/20 flex items-center justify-between text-xs text-amber-400 group-hover:text-amber-300 font-bold">
-              <span>Ver perfil & Golden Circle</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-amber-300 transition-colors drop-shadow-md">
+                MARÍA GRACIA AGURTO
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                CEO Golden Circle (Miami) • Inversionista Ángel
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-amber-300/90 pt-2 border-t border-white/20">
+                <span>+$7M Levantados • Fellow U.S. Dept State</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 4. Nataly Napanga (Líder / SPLENDIA / Perú) -->
-          <div class="speaker-card group glass-card hover:border-purple-500/60 p-5 rounded-3xl border border-purple-500/40 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-purple-500/50 shadow-lg shadow-purple-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2 bg-gradient-to-b from-purple-950/70 via-slate-900 to-black"
                data-category="leaders peru all"
                onclick="openSpeakerSideDrawer('nataly-napanga')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-bold px-2.5 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30">
-                  CO-DIRECTORA
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Perú">
-                  <span class="text-base">🇵🇪</span> PE
-                </span>
-              </div>
-
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-600 p-1 shadow-lg shadow-purple-500/20">
-                  <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
-                    NN
-                  </div>
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-purple-400 text-[10px] font-black text-purple-300 shadow-md">
-                  SPLENDIA
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">Nataly Napanga</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-[11px] font-semibold text-purple-300">
-                  <span>CEO, SPLENDIA</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Emprendimiento de alto rendimiento, modelos de negocio sostenibles y liderazgo de impacto.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-purple-300">
-                  YLAI Fellow 2026
-                </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <div class="w-52 h-52 rounded-full bg-gradient-to-tr from-purple-600 to-pink-600 blur-3xl"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center -translate-y-6">
+              <div class="w-24 h-24 rounded-3xl bg-slate-900/90 border border-purple-500/40 flex items-center justify-center text-purple-300 font-black text-3xl shadow-2xl">
+                NN
               </div>
             </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20 group-hover:from-black/90 transition-all"></div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-purple-400 group-hover:text-purple-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-full bg-purple-500/30 text-purple-300 border border-purple-400/50 backdrop-blur-md shadow-md">
+                CO-DIRECTORA
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
+            </div>
+
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-purple-300 transition-colors drop-shadow-md">
+                NATALY NAPANGA
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Co-Directora del Evento • CEO SPLENDIA
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-purple-300/90 pt-2 border-t border-white/20">
+                <span>YLAI Fellow 2026 • Liderazgo</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 5. Pedro Crisóstomo (Perú) -->
-          <div class="speaker-card group glass-card hover:border-blue-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-blue-500/50 shadow-lg shadow-blue-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2 bg-gradient-to-b from-blue-950/70 via-slate-900 to-black"
                data-category="peru all"
                onclick="openSpeakerSideDrawer('pedro-crisostomo')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Perú">
-                  <span class="text-base">🇵🇪</span> PE
-                </span>
-              </div>
-
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-1 shadow-lg shadow-blue-500/20">
-                  <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
-                    PC
-                  </div>
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-blue-400 text-[10px] font-bold text-blue-300 shadow-md">
-                  Fulbright
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">Pedro Crisóstomo</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-blue-500/10 border border-blue-500/20 text-[11px] font-semibold text-blue-300">
-                  <span>Especialista en Liderazgo</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Liderazgo con propósito e integridad, proyectos de alto impacto social y carreras globales.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 2 • Liderazgo & Impacto
-                </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <div class="w-52 h-52 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 blur-3xl"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center -translate-y-6">
+              <div class="w-24 h-24 rounded-3xl bg-slate-900/90 border border-blue-500/40 flex items-center justify-center text-blue-300 font-black text-3xl shadow-2xl">
+                PC
               </div>
             </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20 group-hover:from-black/90 transition-all"></div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-blue-400 group-hover:text-blue-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/40 backdrop-blur-md font-mono">
+                YLAI & FULBRIGHT
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
+            </div>
+
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-blue-300 transition-colors drop-shadow-md">
+                PEDRO CRISÓSTOMO
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Especialista en Liderazgo • Fulbright Scholar
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-blue-300/90 pt-2 border-t border-white/20">
+                <span>Panel 2 • Liderazgo & Impacto</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 6. Natalia Bejar (Perú) -->
-          <div class="speaker-card group glass-card hover:border-emerald-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-emerald-500/50 shadow-lg shadow-emerald-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-2"
                data-category="peru all"
                onclick="openSpeakerSideDrawer('natalia-bejar')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Perú">
-                  <span class="text-base">🇵🇪</span> PE
-                </span>
-              </div>
+            <img src="assets/speaker-natalia-bejar.jpg" alt="Natalia Bejar - Preservando" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-lg shadow-emerald-500/20 bg-gradient-to-tr from-emerald-500 to-teal-500 overflow-hidden ring-1 ring-emerald-500/30">
-                  <img src="assets/speaker-natalia-bejar.jpg" alt="Natalia Bejar" class="w-full h-full object-cover object-center rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-emerald-400 text-[10px] font-bold text-emerald-300 shadow-md">
-                  Preservando
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Natalia Bejar</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold text-emerald-300">
-                  <span>Fundadora, Preservando</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Sostenibilidad, iniciativas comunitarias y transformación de ideas a proyectos socioambientales.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 2 • Liderazgo & Impacto
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-emerald-400 group-hover:text-emerald-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-emerald-300 transition-colors drop-shadow-md">
+                NATALIA BEJAR
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Fundadora Preservando
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-emerald-300/90 pt-2 border-t border-white/20">
+                <span>Panel 2 • Liderazgo & Impacto</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 7. Gabriela Gaitán (Perú) -->
-          <div class="speaker-card group glass-card hover:border-pink-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-pink-500/50 shadow-lg shadow-pink-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-pink-500/30 hover:-translate-y-2"
                data-category="peru all"
                onclick="openSpeakerSideDrawer('gabriela-gaitan')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-rose-500/10 text-rose-300 border border-rose-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Perú">
-                  <span class="text-base">🇵🇪</span> PE
-                </span>
-              </div>
+            <img src="assets/speaker-gabriela-gaitan.jpg" alt="Gabriela Gaitán - Parlare" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-lg shadow-pink-500/20 bg-gradient-to-tr from-pink-500 to-rose-500 overflow-hidden ring-1 ring-pink-500/30">
-                  <img src="assets/speaker-gabriela-gaitan.jpg" alt="Gabriela Gaitán" class="w-full h-full object-cover object-center rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-pink-400 text-[10px] font-bold text-pink-300 shadow-md">
-                  Parlare
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">Gabriela Gaitán</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-rose-500/10 border border-rose-500/20 text-[11px] font-semibold text-rose-300">
-                  <span>Directora, Parlare</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Habilidades de comunicación, pitch profesional, marca personal y persuasión para el mercado laboral.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 4 • Empleabilidad & Talento
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 border border-rose-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-rose-400 group-hover:text-rose-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-rose-300 transition-colors drop-shadow-md">
+                GABRIELA GAITÁN
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Directora General Parlare
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-rose-300/90 pt-2 border-t border-white/20">
+                <span>Panel 4 • Empleabilidad & Talento</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 8. Alfonso Rangel (Panamá) -->
-          <div class="speaker-card group glass-card hover:border-emerald-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-emerald-500/50 shadow-lg shadow-emerald-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-2 bg-slate-900"
                data-category="international all"
                onclick="openSpeakerSideDrawer('alfonso-rangel')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Panamá">
-                  <span class="text-base">🇵🇦</span> PA
-                </span>
-              </div>
+            <img src="assets/speaker-alfonso-rangel.png" alt="Alfonso Rangel - Incubadora 21" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-lg shadow-emerald-500/20 bg-gradient-to-tr from-emerald-500 to-teal-500 overflow-hidden ring-1 ring-emerald-500/30">
-                  <img src="assets/speaker-alfonso-rangel.png" alt="Alfonso Rangel" class="w-full h-full object-cover object-top rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-emerald-400 text-[10px] font-bold text-emerald-300 shadow-md">
-                  Incubadora 21
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Alfonso Rangel</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-semibold text-emerald-300">
-                  <span>Fundador, Incubadora 21</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Innovación agrícola, validación con recursos limitados y aceleración en Centroamérica.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 1 • Emprendimiento & Negocios
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇦</span> PA
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-emerald-400 group-hover:text-emerald-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-emerald-300 transition-colors drop-shadow-md">
+                ALFONSO RANGEL
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Fundador Incubadora 21 (Panamá)
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-emerald-300/90 pt-2 border-t border-white/20">
+                <span>Panel 1 • Emprendimiento & Negocios</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 9. Luis Avelán (Costa Rica) -->
-          <div class="speaker-card group glass-card hover:border-indigo-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-indigo-500/50 shadow-lg shadow-indigo-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:-translate-y-2 bg-gradient-to-b from-indigo-950/70 via-slate-900 to-black"
                data-category="international all"
                onclick="openSpeakerSideDrawer('luis-avelan')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Costa Rica">
-                  <span class="text-base">🇨🇷</span> CR
-                </span>
-              </div>
-
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-500 p-1 shadow-lg shadow-indigo-500/20">
-                  <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
-                    LA
-                  </div>
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-indigo-400 text-[10px] font-bold text-indigo-300 shadow-md">
-                  F. Británica
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">Luis Avelán</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-[11px] font-semibold text-indigo-300">
-                  <span>Farmacia Británica</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Transformación digital en empresas tradicionales, gestión operativa y modernización de procesos.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 3 • Innovación Digital
-                </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <div class="w-52 h-52 rounded-full bg-gradient-to-tr from-indigo-600 to-blue-500 blur-3xl"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center -translate-y-6">
+              <div class="w-24 h-24 rounded-3xl bg-slate-900/90 border border-indigo-500/40 flex items-center justify-center text-indigo-300 font-black text-3xl shadow-2xl">
+                LA
               </div>
             </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20 group-hover:from-black/90 transition-all"></div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-indigo-400 group-hover:text-indigo-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇨🇷</span> CR
+              </span>
+            </div>
+
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-indigo-300 transition-colors drop-shadow-md">
+                LUIS AVELÁN
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Farmacia Británica (Costa Rica)
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-indigo-300/90 pt-2 border-t border-white/20">
+                <span>Panel 3 • Innovación Digital</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 10. Jorge Escalante (El Salvador) -->
-          <div class="speaker-card group glass-card hover:border-cyan-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-cyan-500/50 shadow-lg shadow-cyan-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:-translate-y-2 bg-gradient-to-b from-cyan-950/70 via-slate-900 to-black"
                data-category="international all"
                onclick="openSpeakerSideDrawer('jorge-escalante')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="El Salvador">
-                  <span class="text-base">🇸🇻</span> SV
-                </span>
-              </div>
-
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl bg-gradient-to-tr from-cyan-600 to-teal-500 p-1 shadow-lg shadow-cyan-500/20">
-                  <div class="w-full h-full rounded-[14px] bg-slate-900 flex items-center justify-center text-white font-black text-2xl">
-                    JE
-                  </div>
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-cyan-400 text-[10px] font-bold text-cyan-300 shadow-md">
-                  Protolab
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">Jorge Escalante</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20 text-[11px] font-semibold text-cyan-300">
-                  <span>Fundador, Protolab Agency</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Transformación digital, automatización de marketing y ventas, IA aplicada y productividad.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 3 • Innovación Digital
-                </div>
+            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
+              <div class="w-52 h-52 rounded-full bg-gradient-to-tr from-cyan-600 to-teal-500 blur-3xl"></div>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-center -translate-y-6">
+              <div class="w-24 h-24 rounded-3xl bg-slate-900/90 border border-cyan-500/40 flex items-center justify-center text-cyan-300 font-black text-3xl shadow-2xl">
+                JE
               </div>
             </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20 group-hover:from-black/90 transition-all"></div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-cyan-400 group-hover:text-cyan-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇸🇻</span> SV
+              </span>
+            </div>
+
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-cyan-300 transition-colors drop-shadow-md">
+                JORGE ESCALANTE
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Fundador Protolab Agency (El Salvador)
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-cyan-300/90 pt-2 border-t border-white/20">
+                <span>Panel 3 • Innovación Digital</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 11. José Mendoza (Bolivia) -->
-          <div class="speaker-card group glass-card hover:border-amber-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-amber-500/50 shadow-lg shadow-amber-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/30 hover:-translate-y-2"
                data-category="international all"
                onclick="openSpeakerSideDrawer('jose-mendoza')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Bolivia">
-                  <span class="text-base">🇧🇴</span> BO
-                </span>
-              </div>
+            <img src="assets/speaker-jose-mendoza.jpg" alt="José Mendoza - Trabajito.com" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-lg shadow-amber-500/20 bg-gradient-to-tr from-amber-500 to-yellow-500 overflow-hidden ring-1 ring-amber-500/30">
-                  <img src="assets/speaker-jose-mendoza.jpg" alt="José Mendoza" class="w-full h-full object-cover object-center rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-amber-400 text-[10px] font-bold text-amber-300 shadow-md">
-                  Trabajito
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors">José Mendoza</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-[11px] font-semibold text-amber-300">
-                  <span>Fundador, Trabajito.com</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  Plataformas de empleo juvenil, marca personal en LinkedIn y posicionamiento para talento remoto global.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 4 • Empleabilidad & Talento
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇧🇴</span> BO
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-amber-400 group-hover:text-amber-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-amber-300 transition-colors drop-shadow-md">
+                JOSÉ MENDOZA
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Fundador Trabajito.com (Bolivia)
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-amber-300/90 pt-2 border-t border-white/20">
+                <span>Panel 4 • Empleabilidad & Talento</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
           <!-- 12. Andrea Vivas (Venezuela) -->
-          <div class="speaker-card group glass-card hover:border-purple-500/60 p-5 rounded-3xl border border-slate-800 relative overflow-hidden flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-purple-500/50 shadow-lg shadow-purple-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-2 bg-slate-900"
                data-category="international all"
                onclick="openSpeakerSideDrawer('andrea-vivas')">
-            <div>
-              <div class="flex items-center justify-between mb-3.5">
-                <span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-md bg-purple-500/10 text-purple-300 border border-purple-500/20 font-mono">
-                  YLAI Fellow
-                </span>
-                <span class="text-xs font-semibold text-slate-300 flex items-center gap-1" title="Venezuela">
-                  <span class="text-base">🇻🇪</span> VE
-                </span>
-              </div>
+            <img src="assets/speaker-andrea-vivas.png" alt="Andrea Vivas - Bespoke Education" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
 
-              <div class="relative w-28 h-28 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
-                <div class="w-full h-full rounded-2xl p-1 shadow-lg shadow-purple-500/20 bg-gradient-to-tr from-purple-500 to-violet-500 overflow-hidden ring-1 ring-purple-500/30">
-                  <img src="assets/speaker-andrea-vivas.png" alt="Andrea Vivas" class="w-full h-full object-cover object-top rounded-[14px]" />
-                </div>
-                <div class="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-slate-950 border border-purple-400 text-[10px] font-bold text-purple-300 shadow-md">
-                  Bespoke
-                </div>
-              </div>
-
-              <div class="text-center">
-                <h4 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">Andrea Vivas</h4>
-                <div class="inline-flex items-center gap-1 mt-1 px-2.5 py-0.5 rounded-lg bg-purple-500/10 border border-purple-500/20 text-[11px] font-semibold text-purple-300">
-                  <span>Fundadora, Bespoke Education</span>
-                </div>
-                <p class="text-xs text-slate-400 mt-2 line-clamp-2 leading-relaxed">
-                  El inglés como acelerador de movilidad laboral, entrevistas internacionales y acceso a clientes globales.
-                </p>
-                <div class="mt-2 text-[11px] font-mono text-slate-400">
-                  Panel 4 • Empleabilidad & Talento
-                </div>
-              </div>
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇻🇪</span> VE
+              </span>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-xs text-purple-400 group-hover:text-purple-300 font-semibold">
-              <span>Ver biografía completa</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-purple-300 transition-colors drop-shadow-md">
+                ANDREA VIVAS
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Fundadora Bespoke Education (Venezuela)
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-purple-300/90 pt-2 border-t border-white/20">
+                <span>Panel 4 • Empleabilidad & Talento</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
             </div>
           </div>
 
