@@ -1453,7 +1453,39 @@
             </div>
           </div>
 
-          <!-- 8. Alfonso Rangel (Panamá) -->
+          <!-- 8. Elizabeth Javier (Perú / TITI Brand) -->
+          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-emerald-500/50 shadow-lg shadow-emerald-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-2"
+               data-category="peru all"
+               onclick="openSpeakerSideDrawer('elizabeth-javier')">
+            <img src="assets/speaker-elizabeth-javier.jpg" alt="Elizabeth Javier - TITI Brand" class="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/30 group-hover:from-black/90 transition-all"></div>
+
+            <!-- Top Badges -->
+            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 backdrop-blur-md font-mono">
+                YLAI FELLOW
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
+                <span class="text-sm">🇵🇪</span> PE
+              </span>
+            </div>
+
+            <!-- Bottom Info Overlay -->
+            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
+              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-emerald-300 transition-colors drop-shadow-md">
+                ELIZABETH JAVIER
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
+                Cofundadora TITI Brand • YLAI Fellow
+              </p>
+              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-emerald-300/90 pt-2 border-t border-white/20">
+                <span>Triple Impacto • Mascotas Sostenibles</span>
+                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Alfonso Rangel (Panamá) -->
           <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-emerald-500/50 shadow-lg shadow-emerald-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-2 bg-slate-900"
                data-category="international all"
                onclick="openSpeakerSideDrawer('alfonso-rangel')">
@@ -1476,10 +1508,10 @@
                 ALFONSO RANGEL
               </h4>
               <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
-                Fundador Incubadora 21 (Panamá)
+                Conferencista de Impacto & Fundador AgTech
               </p>
               <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-emerald-300/90 pt-2 border-t border-white/20">
-                <span>Panel 1 • Emprendimiento & Negocios</span>
+                <span>Sistemas Alimentarios • Etapa Semilla</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
               </div>
             </div>
@@ -3075,8 +3107,8 @@
       },
       "alfonso-rangel": {
         name: "Alfonso Rangel",
-        role: "Fundador & Director Ejecutivo",
-        companyTag: "Fundador • Incubadora 21 (Panamá)",
+        role: "Conferencista de impacto y fundador de agtech",
+        companyTag: "Conferencista AgTech • Incubadora 21 (Panamá)",
         country: "Panamá",
         flag: "🇵🇦",
         ylaiStatus: "YLAI Fellow",
@@ -3089,11 +3121,44 @@
         panelInfo: {
           badge: "🟢 PANEL 1 — EMPRENDIMIENTO & NEGOCIOS",
           title: "De la idea a la oportunidad",
-          description: "Innovación agrícola, validación ágil con recursos limitados y modelos de aceleración de negocios en Centroamérica."
+          description: "Innovación para sistemas alimentarios, validación ágil con recursos limitados y desarrollo de emprendedores en etapa semilla."
         },
+        metrics: [
+          { label: "Especialidad", value: "AgTech", desc: "Sistemas alimentarios" },
+          { label: "Enfoque", value: "Etapa Semilla", desc: "Desarrollo emprendedor" },
+          { label: "Impacto", value: "Conferencista", desc: "Orador internacional" }
+        ],
         bio: [
-          "Alfonso Rangel es Fundador de Incubadora 21 en Panamá y becario YLAI.",
-          "Emprendedor referente en AgTech y ecosistemas de emprendimiento en Centroamérica. Trabaja junto a fundadores en etapas tempranas para estructurar modelos de negocio viables, optimizar inversiones iniciales y acelerar la entrada a mercado."
+          "Conferencista de impacto y fundador de agtech, enfocado en innovación para sistemas alimentarios y desarrollo de emprendedores en etapa semilla.",
+          "Como becario YLAI de Panamá y fundador de Incubadora 21, impulsa la validación ágil, la adopción de tecnologías sostenibles y modelos de negocio viables para fortalecer la seguridad alimentaria y dinamizar el ecosistema emprendedor de América Latina."
+        ]
+      },
+      "elizabeth-javier": {
+        name: "Elizabeth Javier",
+        role: "Cofundadora & CEO • TITI Brand",
+        companyTag: "Cofundadora • TITI Brand (Perú)",
+        country: "Perú",
+        flag: "🇵🇪",
+        ylaiStatus: "YLAI Fellow",
+        badgeText: "YLAI FELLOW",
+        badgeIcon: "leaf",
+        badgeClass: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30",
+        photo: "assets/speaker-elizabeth-javier.jpg",
+        imgPos: "top",
+        gradient: "from-emerald-600 to-teal-500",
+        panelInfo: {
+          badge: "🟢 PANEL 1 — EMPRENDIMIENTO & NEGOCIOS",
+          title: "De la idea a la oportunidad: Innovación & Triple Impacto",
+          description: "Desarrollo de productos sostenibles, economía circular con caucho silvestre amazónico e inclusión social en la cadena de valor."
+        },
+        metrics: [
+          { label: "Modelo", value: "Triple Impacto", desc: "Social, ambiental y económico" },
+          { label: "Materia Prima", value: "Caucho Silvestre", desc: "Shiringa amazónica & reciclaje" },
+          { label: "Comunidad", value: "Inclusión", desc: "Artesanas y comunidades nativas" }
+        ],
+        bio: [
+          "Elizabeth Javier es cofundadora y CEO de TITI Brand, marca peruana de accesorios y productos ecológicos para mascotas de triple impacto, y becaria del programa Young Leaders of the Americas Initiative (YLAI) de los Estados Unidos.",
+          "Su modelo de innovación utiliza caucho silvestre amazónico obtenido de manera sostenible de árboles de shiringa junto a comunidades nativas y textiles regenerados confeccionados por mujeres, articulando sostenibilidad ambiental, economía circular y empoderamiento social en el Perú."
         ]
       },
       "luis-avelan": {
