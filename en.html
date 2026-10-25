@@ -2724,7 +2724,7 @@ An international summit connecting Latin American talent with global employment,
                 <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Live Badge Preview</span>
                 
                 <!-- EXACT BADGE DESIGN (Matching Image 1 in PARTICIPANTE Mode) -->
-                <div id="officialBadgeCard" class="w-full max-w-[380px] rounded-[2.5rem] bg-gradient-to-b from-[#1b2576] via-[#161f62] to-[#11174e] border-2 border-white/20 shadow-2xl shadow-indigo-950/60 overflow-hidden relative text-center pt-8 pb-0 select-none">
+                <div id="officialBadgeCard" class="w-full max-w-[380px] rounded-none bg-gradient-to-b from-[#1b2576] via-[#161f62] to-[#11174e] border-2 border-white/20 shadow-2xl shadow-indigo-950/60 overflow-hidden relative text-center pt-8 pb-0 select-none">
                   
                   <!-- Subtle Background Concentric Glow -->
                   <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -3535,8 +3535,7 @@ An international summit connecting Latin American talent with global employment,
         const footerImg = results[1];
 
         ctx.save();
-        roundRect(ctx, 0, 0, 819, 1024, 48);
-        ctx.clip();
+        // Rectangular badge with straight 90-degree corners (en punta, sin formas curvadas)
 
         // Background Gradient
         const grad = ctx.createLinearGradient(0, 0, 0, 1024);
