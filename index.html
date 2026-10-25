@@ -776,276 +776,581 @@
       </div>
     </section>
 
-    <!-- ==================== LAS 5 ÁREAS DEL FORUM ==================== -->
-    <section id="areas" class="py-24 bg-polyglot-deep/40 relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- ==================== LAS 5 ÁREAS DEL FORUM (TARJETAS INTERACTIVAS & DELICADAS) ==================== -->
+    <section id="areas" class="py-24 relative overflow-hidden bg-gradient-to-b from-polyglot-navy via-polyglot-deep to-polyglot-navy">
+      <!-- Glow ambient background - Delicate & Elegant -->
+      <div class="absolute top-1/4 left-1/4 w-[32rem] h-[32rem] bg-pink-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold tracking-wider uppercase mb-3">
-            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Estructura Académica y Práctica
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/25 text-pink-300 text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4 shadow-sm shadow-pink-500/10 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-pink-400 animate-pulse"></span>
+            <span>Estructura & Aprendizaje Interactivo</span>
           </div>
-          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
             Las 5 Áreas del Forum
           </h2>
-          <p class="mt-4 text-slate-400 text-base">
-            Diseñadas estratégicamente para cubrir desde la concepción de proyectos hasta la internacionalización y la conexión real con el ecosistema.
+          <p class="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed font-normal">
+            Diseñadas con delicadeza y propósito para inspirar tu visión, conectar tu talento y abrir oportunidades reales en América Latina y el mundo.
           </p>
+
+          <!-- Interactive Ribbon / Filter Pills -->
+          <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-2.5 overflow-x-auto pb-2 pt-6 no-scrollbar">
+            <button type="button" onclick="filterAreas('all', this)" class="area-filter-btn active whitespace-nowrap px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 bg-white/15 text-white border border-purple-400/40 shadow-sm shadow-purple-500/20">
+              ✦ Todas las Áreas
+            </button>
+            <button type="button" onclick="filterAreas('area-1', this)" class="area-filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 bg-white/[0.04] text-slate-300 hover:text-white border border-white/10 hover:border-emerald-400/30">
+              01 • Emprendimiento & Negocios
+            </button>
+            <button type="button" onclick="filterAreas('area-2', this)" class="area-filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 bg-white/[0.04] text-slate-300 hover:text-white border border-white/10 hover:border-purple-400/30">
+              02 • Liderazgo & Impacto
+            </button>
+            <button type="button" onclick="filterAreas('area-3', this)" class="area-filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 bg-white/[0.04] text-slate-300 hover:text-white border border-white/10 hover:border-sky-400/30">
+              03 • Innovación Digital
+            </button>
+            <button type="button" onclick="filterAreas('area-4', this)" class="area-filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 bg-white/[0.04] text-slate-300 hover:text-white border border-white/10 hover:border-amber-400/30">
+              04 • Empleabilidad Global
+            </button>
+            <button type="button" onclick="filterAreas('area-5', this)" class="area-filter-btn whitespace-nowrap px-4 py-2 rounded-full text-xs font-medium transition-all duration-300 bg-white/[0.04] text-slate-300 hover:text-white border border-white/10 hover:border-indigo-400/30">
+              05 • Global Networking
+            </button>
+          </div>
         </div>
 
         <!-- 5 Áreas Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7" id="areasGridContainer">
 
-          <!-- ÁREA 1: EMPRENDIMIENTO & NEGOCIOS (🟢) -->
-          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-emerald-500/30 flex flex-col justify-between relative overflow-hidden group">
-            <div class="absolute -right-8 -top-8 w-28 h-28 bg-emerald-600/10 rounded-full blur-xl group-hover:bg-emerald-600/25 transition-all"></div>
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> ÁREA 1
-                </span>
-                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
-                  <i data-lucide="briefcase" class="w-3.5 h-3.5 text-emerald-400"></i> Panel / Conversatorio
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-                Emprendimiento & Negocios
-              </h3>
-              <p class="text-sm font-semibold text-emerald-200/90 mb-4">
-                “De la idea a la oportunidad”
-              </p>
+          <!-- ÁREA 1: EMPRENDIMIENTO & NEGOCIOS -->
+          <div class="area-card-wrapper" data-area="area-1" id="card-area-1">
+            <div class="group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-polyglot-card/60 backdrop-blur-xl border border-white/10 hover:border-emerald-300/35 transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-950/30 flex flex-col justify-between h-full overflow-hidden">
+              <div class="absolute -right-8 -top-8 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all pointer-events-none"></div>
               
-              <div class="space-y-2 mb-6">
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
-                  <span>Cómo validar una idea en el mercado real.</span>
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-emerald-500/15 text-emerald-300 border border-emerald-500/25">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> ÁREA 01
+                  </span>
+                  <span class="text-[11px] font-medium text-slate-400 bg-white/[0.04] px-2.5 py-0.5 rounded-full border border-white/5">
+                    Panel Conversatorio
+                  </span>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
-                  <span>Emprender con recursos limitados.</span>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-emerald-200 transition-colors">
+                  Emprendimiento & Negocios
+                </h3>
+                <p class="text-xs sm:text-sm italic font-light text-emerald-200/90 mt-1 mb-5">
+                  “De la idea a la oportunidad real en América Latina”
+                </p>
+
+                <!-- Switcher -->
+                <div class="inline-flex items-center p-1 rounded-2xl bg-white/[0.04] border border-white/10 mb-5 shadow-inner">
+                  <button type="button" onclick="switchCardView('card-area-1', 'temas', this)" class="card-view-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-white/15 shadow-sm transition-all flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-300"></i> Ejes Clave
+                  </button>
+                  <button type="button" onclick="switchCardView('card-area-1', 'speakers', this)" class="card-view-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 transition-all flex items-center gap-1.5">
+                    <i data-lucide="users" class="w-3.5 h-3.5 text-emerald-300"></i> Panelistas (4)
+                  </button>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
-                  <span>Modelos de negocio e innovación en Latinoamérica.</span>
+
+                <!-- View Temas -->
+                <div class="view-temas space-y-2.5">
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Validación ágil de hipótesis en el mercado real sin sobrecostos.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Modelos de triple impacto, biomateriales y economía circular.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Estrategias de inversión ángel, readiness y levantamiento de capital.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-emerald-500/15 text-emerald-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Aprendizajes sin filtro, resiliencia y pivots de fundadores.</span>
+                  </div>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5"></i>
-                  <span>Errores y aprendizajes sin filtro de fundadores.</span>
+
+                <!-- View Speakers -->
+                <div class="view-speakers hidden space-y-2.5">
+                  <div onclick="openSpeakerSideDrawer('cristian-gutierrez')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-cristian-gutierrez.jpg" alt="Cristian Gutiérrez" class="w-10 h-10 rounded-xl object-cover object-[53%_15%] border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-emerald-300 transition-colors truncate">Cristian Gutiérrez</h5>
+                        <span class="text-[10px]">🇵🇪</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Fundador RONIN • Ganador Desafío Kunan</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('maria-gracia')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-maria-gracia.jpg" alt="María Gracia Agurto" class="w-10 h-10 rounded-xl object-cover border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-emerald-300 transition-colors truncate">María Gracia Agurto</h5>
+                        <span class="text-[10px]">🇵🇪</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">CEO Golden Circle (Miami) • Inversión Ángel</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('alfonso-rangel')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-alfonso-rangel.png" alt="Alfonso Rangel" class="w-10 h-10 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-emerald-300 transition-colors truncate">Alfonso Rangel</h5>
+                        <span class="text-[10px]">🇵🇦</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Fundador AgTech • Incubadora 21</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('rosa-centurion')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-emerald-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-rosa-centurion.jpg" alt="Rosa Mabel Centurión" class="w-10 h-10 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-emerald-300 transition-colors truncate">Rosa Mabel Centurión</h5>
+                        <span class="text-[10px]">🇵🇾</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">La Tienda de Rosita • Dra. en Administración</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="pt-4 border-t border-slate-800/80">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Panelistas:</span>
-              <div class="text-xs text-slate-200 font-medium leading-relaxed">
-                Cristian Gutiérrez (Perú / RONIN) • María Gracia Agurto (Golden Circle) • Alfonso Rangel (Panamá / Incubadora 21) • Rosa Mabel Centurión (Paraguay / La Tienda de Rosita)
+              <!-- Card Bottom -->
+              <div class="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+                <span class="inline-flex items-center gap-1 text-slate-300 font-medium">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-emerald-400"></i> 4:25 – 4:55 PM (PET)
+                </span>
+                <a href="#agenda" class="text-emerald-300 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors">
+                  Ver en Agenda <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- ÁREA 2: LIDERAZGO & IMPACTO (🟣) -->
-          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-purple-500/30 flex flex-col justify-between relative overflow-hidden group">
-            <div class="absolute -right-8 -top-8 w-28 h-28 bg-purple-600/10 rounded-full blur-xl group-hover:bg-purple-600/25 transition-all"></div>
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-purple-400"></span> ÁREA 2
-                </span>
-                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
-                  <i data-lucide="messages-square" class="w-3.5 h-3.5 text-purple-400"></i> Panel / Conversatorio
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                Liderazgo & Impacto
-              </h3>
-              <p class="text-sm font-semibold text-purple-200/90 mb-4">
-                “Liderar para generar impacto”
-              </p>
+          <!-- ÁREA 2: LIDERAZGO & IMPACTO (NATALIA BEJAR) -->
+          <div class="area-card-wrapper" data-area="area-2" id="card-area-2">
+            <div class="group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-polyglot-card/60 backdrop-blur-xl border border-white/10 hover:border-purple-300/35 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-950/30 flex flex-col justify-between h-full overflow-hidden">
+              <div class="absolute -right-8 -top-8 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all pointer-events-none"></div>
               
-              <div class="space-y-2 mb-6">
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
-                  <span>Liderazgo con propósito e integridad.</span>
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-purple-500/15 text-purple-300 border border-purple-500/25">
+                    <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i> ÁREA 02
+                  </span>
+                  <span class="text-[11px] font-medium text-slate-400 bg-white/[0.04] px-2.5 py-0.5 rounded-full border border-white/5">
+                    Panel Conversatorio
+                  </span>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
-                  <span>Construcción de proyectos de alto impacto social.</span>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-purple-200 transition-colors">
+                  Liderazgo & Impacto Social
+                </h3>
+                <p class="text-xs sm:text-sm italic font-light text-purple-200/90 mt-1 mb-5">
+                  “Liderar para transformar con propósito e integridad”
+                </p>
+
+                <!-- Switcher -->
+                <div class="inline-flex items-center p-1 rounded-2xl bg-white/[0.04] border border-white/10 mb-5 shadow-inner">
+                  <button type="button" onclick="switchCardView('card-area-2', 'temas', this)" class="card-view-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-white/15 shadow-sm transition-all flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-purple-300"></i> Ejes Clave
+                  </button>
+                  <button type="button" onclick="switchCardView('card-area-2', 'speakers', this)" class="card-view-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 transition-all flex items-center gap-1.5">
+                    <i data-lucide="users" class="w-3.5 h-3.5 text-purple-300"></i> Panelista Líder
+                  </button>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
-                  <span>Cómo pasar de una idea a una iniciativa sostenible.</span>
+
+                <!-- View Temas -->
+                <div class="view-temas space-y-2.5">
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-purple-500/15 text-purple-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Liderazgo ético, auténtico y con propósito desde América Latina.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-purple-500/15 text-purple-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Estructuración y gestión de proyectos socioambientales sostenibles.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-purple-500/15 text-purple-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Cómo convertir causas comunitarias en modelos organizacionales viables.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-purple-500/15 text-purple-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Innovación rural, educación comunitaria y alianzas multilaterales.</span>
+                  </div>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5"></i>
-                  <span>Liderazgo auténtico desde Latinoamérica.</span>
+
+                <!-- View Speakers -->
+                <div class="view-speakers hidden space-y-2.5">
+                  <div onclick="openSpeakerSideDrawer('natalia-bejar')" class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-purple-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3.5 group/sp">
+                    <img src="assets/speaker-natalia-bejar.jpg" alt="Natalia Bejar" class="w-12 h-12 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-sm font-bold text-white group-hover/sp:text-purple-300 transition-colors truncate">Natalia Bejar</h5>
+                        <span class="text-[11px]">🇵🇪</span>
+                      </div>
+                      <p class="text-xs text-slate-400 truncate">Cofundadora Preservando • Especialista en M&A</p>
+                      <span class="inline-flex items-center gap-1 text-[10px] text-purple-300 font-medium mt-1">
+                        <span>🏆 20+ Premios Globales</span> • <span>YLAI Fellow</span>
+                      </span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-xs text-purple-200/90 leading-relaxed">
+                    🌟 <strong>Liderazgo de impacto:</strong> Con más de 12 años de experiencia ejecutiva en M&A y proyectos en 4 continentes, Natalia compartirá marcos para estructurar iniciativas que trasciendan y generen impacto tangible.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="pt-4 border-t border-slate-800/80">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Panelistas:</span>
-              <div class="text-xs text-slate-200 font-medium leading-relaxed">
-                Pedro Crisóstomo (Perú / Fulbright) • Natalia Bejar (Perú / Preservando)
+              <!-- Card Bottom -->
+              <div class="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+                <span class="inline-flex items-center gap-1 text-slate-300 font-medium">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-purple-400"></i> 4:55 – 5:25 PM (PET)
+                </span>
+                <a href="#agenda" class="text-purple-300 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors">
+                  Ver en Agenda <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- ÁREA 3: INNOVACIÓN DIGITAL & HABILIDADES DEL FUTURO (🔵) -->
-          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-cyan-500/30 flex flex-col justify-between relative overflow-hidden group">
-            <div class="absolute -right-8 -top-8 w-28 h-28 bg-cyan-600/10 rounded-full blur-xl group-hover:bg-cyan-600/25 transition-all"></div>
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-cyan-400"></span> ÁREA 3
-                </span>
-                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
-                  <i data-lucide="sparkle" class="w-3.5 h-3.5 text-cyan-400"></i> Panel Propio
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
-                Innovación Digital & Habilidades del Futuro
-              </h3>
-              <p class="text-sm font-semibold text-cyan-200/90 mb-4">
-                “La tecnología no reemplaza al talento. Lo potencia.”
-              </p>
+          <!-- ÁREA 3: INNOVACIÓN DIGITAL -->
+          <div class="area-card-wrapper" data-area="area-3" id="card-area-3">
+            <div class="group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-polyglot-card/60 backdrop-blur-xl border border-white/10 hover:border-sky-300/35 transition-all duration-500 hover:shadow-2xl hover:shadow-sky-950/30 flex flex-col justify-between h-full overflow-hidden">
+              <div class="absolute -right-8 -top-8 w-32 h-32 bg-sky-500/10 rounded-full blur-2xl group-hover:bg-sky-500/20 transition-all pointer-events-none"></div>
               
-              <div class="space-y-2 mb-6">
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
-                  <span>Transformación digital aplicada al trabajo y emprendimiento.</span>
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-sky-500/15 text-sky-300 border border-sky-500/25">
+                    <i data-lucide="compass" class="w-3.5 h-3.5"></i> ÁREA 03
+                  </span>
+                  <span class="text-[11px] font-medium text-slate-400 bg-white/[0.04] px-2.5 py-0.5 rounded-full border border-white/5">
+                    Panel Propio
+                  </span>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
-                  <span>Inteligencia artificial y nuevas herramientas digitales.</span>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-sky-200 transition-colors">
+                  Innovación Digital & Futuro
+                </h3>
+                <p class="text-xs sm:text-sm italic font-light text-sky-200/90 mt-1 mb-5">
+                  “La tecnología no reemplaza al talento humano; lo potencia”
+                </p>
+
+                <!-- Switcher -->
+                <div class="inline-flex items-center p-1 rounded-2xl bg-white/[0.04] border border-white/10 mb-5 shadow-inner">
+                  <button type="button" onclick="switchCardView('card-area-3', 'temas', this)" class="card-view-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-white/15 shadow-sm transition-all flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-300"></i> Ejes Clave
+                  </button>
+                  <button type="button" onclick="switchCardView('card-area-3', 'speakers', this)" class="card-view-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 transition-all flex items-center gap-1.5">
+                    <i data-lucide="users" class="w-3.5 h-3.5 text-sky-300"></i> Panelistas (3)
+                  </button>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
-                  <span>Automatización y productividad.</span>
+
+                <!-- View Temas -->
+                <div class="view-temas space-y-2.5">
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-sky-500/15 text-sky-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Transformación digital aplicada al trabajo y empresas tradicionales.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-sky-500/15 text-sky-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Adopción práctica de Inteligencia Artificial y herramientas no-code.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-sky-500/15 text-sky-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Automatización de flujos comerciales, CRO y ventas 24/7.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-sky-500/15 text-sky-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Habilidades de alto valor para liderar en la economía global.</span>
+                  </div>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
-                  <span>Nuevas habilidades para el mercado global.</span>
-                </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5"></i>
-                  <span>Cómo prepararse profesionalmente para la economía digital.</span>
+
+                <!-- View Speakers -->
+                <div class="view-speakers hidden space-y-2.5">
+                  <div onclick="openSpeakerSideDrawer('luis-avelan')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-sky-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-luis-avellan.jpg" alt="Luis Carlos Avellán" class="w-10 h-10 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-sky-300 transition-colors truncate">Luis Carlos Avellán</h5>
+                        <span class="text-[10px]">🇨🇷</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Farmacia Británica • YLAI 2026</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('jorge-escalante')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-sky-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-jorge-escalante.jpg" alt="Jorge Escalante" class="w-10 h-10 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-sky-300 transition-colors truncate">Jorge Escalante</h5>
+                        <span class="text-[10px]">🇸🇻</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Director Protolab • Meta Ads Growth</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('roberto-romero')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-sky-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-roberto-romero.jpg" alt="Roberto Romero" class="w-10 h-10 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-sky-300 transition-colors truncate">Roberto Romero</h5>
+                        <span class="text-[10px]">🇻🇪</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">CEO Multipro • Webflow Partner & CRO</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="pt-4 border-t border-slate-800/80">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Panelistas:</span>
-              <div class="text-xs text-slate-200 font-medium leading-relaxed">
-                Luis Avellán (Costa Rica) • Jorge Escalante (El Salvador / Protolab Agency) • Roberto Romero (Venezuela / Multipro Web Studio)
+              <!-- Card Bottom -->
+              <div class="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+                <span class="inline-flex items-center gap-1 text-slate-300 font-medium">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-sky-400"></i> 5:35 – 6:05 PM (PET)
+                </span>
+                <a href="#agenda" class="text-sky-300 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors">
+                  Ver en Agenda <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- ÁREA 4: EMPLEABILIDAD & TALENTO GLOBAL (🟡) -->
-          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-amber-500/30 flex flex-col justify-between relative overflow-hidden group">
-            <div class="absolute -right-8 -top-8 w-28 h-28 bg-amber-600/10 rounded-full blur-xl group-hover:bg-amber-600/25 transition-all"></div>
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-amber-400"></span> ÁREA 4
-                </span>
-                <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
-                  <i data-lucide="globe" class="w-3.5 h-3.5 text-amber-400"></i> Panel Internacional
-                </span>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
-                Empleabilidad & Talento Global
-              </h3>
-              <p class="text-sm font-semibold text-amber-200/90 mb-4">
-                “Convierte tu talento en oportunidades globales”
-              </p>
+          <!-- ÁREA 4: EMPLEABILIDAD & TALENTO GLOBAL -->
+          <div class="area-card-wrapper" data-area="area-4" id="card-area-4">
+            <div class="group relative rounded-3xl p-6 sm:p-7 bg-gradient-to-b from-slate-900/60 via-slate-900/40 to-polyglot-card/60 backdrop-blur-xl border border-white/10 hover:border-amber-300/35 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-950/30 flex flex-col justify-between h-full overflow-hidden">
+              <div class="absolute -right-8 -top-8 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all pointer-events-none"></div>
               
-              <div class="space-y-2 mb-6">
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
-                  <span>Empleabilidad remota e internacional.</span>
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-amber-500/15 text-amber-300 border border-amber-500/25">
+                    <i data-lucide="globe" class="w-3.5 h-3.5"></i> ÁREA 04
+                  </span>
+                  <span class="text-[11px] font-medium text-slate-400 bg-white/[0.04] px-2.5 py-0.5 rounded-full border border-white/5">
+                    Panel Internacional
+                  </span>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
-                  <span>Construcción de marca personal y LinkedIn.</span>
+
+                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-amber-200 transition-colors">
+                  Empleabilidad & Talento Global
+                </h3>
+                <p class="text-xs sm:text-sm italic font-light text-amber-200/90 mt-1 mb-5">
+                  “Convierte tu talento en oportunidades sin fronteras”
+                </p>
+
+                <!-- Switcher -->
+                <div class="inline-flex items-center p-1 rounded-2xl bg-white/[0.04] border border-white/10 mb-5 shadow-inner">
+                  <button type="button" onclick="switchCardView('card-area-4', 'temas', this)" class="card-view-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-white/15 shadow-sm transition-all flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i> Ejes Clave
+                  </button>
+                  <button type="button" onclick="switchCardView('card-area-4', 'speakers', this)" class="card-view-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 transition-all flex items-center gap-1.5">
+                    <i data-lucide="users" class="w-3.5 h-3.5 text-amber-300"></i> Panelistas (2)
+                  </button>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
-                  <span>Los idiomas como acelerador de movilidad laboral.</span>
+
+                <!-- View Temas -->
+                <div class="view-temas space-y-2.5">
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Rutas para acceder a empleo remoto y compensación internacional.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Los idiomas como acelerador definitivo de movilidad profesional.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Posicionamiento de marca personal y autoridad en LinkedIn.</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <div class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-300 flex items-center justify-center shrink-0 mt-0.5">
+                      <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    <span class="text-xs sm:text-[13px] text-slate-300 leading-relaxed">Estrategias para conectar y negociar con clientes en el exterior.</span>
+                  </div>
                 </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
-                  <span>Estrategias para conectar con clientes y empresas en el exterior.</span>
-                </div>
-                <div class="text-xs text-slate-300 flex items-start gap-2">
-                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5"></i>
-                  <span>Cómo posicionarse frente al mercado global.</span>
+
+                <!-- View Speakers -->
+                <div class="view-speakers hidden space-y-2.5">
+                  <div onclick="openSpeakerSideDrawer('jose-mendoza')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-amber-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-jose-mendoza.jpg" alt="José Mendoza" class="w-10 h-10 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-amber-300 transition-colors truncate">José Mendoza</h5>
+                        <span class="text-[10px]">🇧🇴</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">CTO Trabajito.com • HR Tech (+190k usuarios)</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('andrea-vivas')" class="p-2.5 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-amber-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-andrea-vivas.png" alt="Andrea Vivas" class="w-10 h-10 rounded-xl object-cover object-center border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-amber-300 transition-colors truncate">Andrea Vivas</h5>
+                        <span class="text-[10px]">🇻🇪</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Fundadora Bespoke Education • Idiomas Globales</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="pt-4 border-t border-slate-800/80">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-1.5">Panelistas:</span>
-              <div class="text-xs text-slate-200 font-medium leading-relaxed">
-                José Mendoza (Bolivia / Trabajito.com) • Andrea Vivas (Venezuela / Bespoke Education)
+              <!-- Card Bottom -->
+              <div class="pt-4 mt-6 border-t border-white/5 flex items-center justify-between text-xs text-slate-400">
+                <span class="inline-flex items-center gap-1 text-slate-300 font-medium">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-amber-400"></i> 6:05 – 6:35 PM (PET)
+                </span>
+                <a href="#agenda" class="text-amber-300 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors">
+                  Ver en Agenda <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- ÁREA 5: GLOBAL NETWORKING (🌎) (Spans 2 columns on lg) -->
-          <div class="glass-card glass-card-hover p-7 rounded-3xl border border-indigo-500/40 flex flex-col justify-between relative overflow-hidden group md:col-span-2 lg:col-span-2">
-            <div class="absolute -right-8 -top-8 w-44 h-44 bg-indigo-600/15 rounded-full blur-2xl group-hover:bg-indigo-600/30 transition-all"></div>
-            <div>
-              <div class="flex items-center justify-between mb-5">
-                <span class="text-xs font-extrabold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span> ÁREA 5 — EL CORAZÓN DEL FORUM
-                </span>
-                <span class="text-xs text-indigo-300 font-bold flex items-center gap-1">
-                  <i data-lucide="network" class="w-3.5 h-3.5"></i> Dinámica Interactiva en Vivo
-                </span>
-              </div>
+          <!-- ÁREA 5: GLOBAL NETWORKING (EL CORAZÓN DEL FORUM) -->
+          <div class="area-card-wrapper md:col-span-2 lg:col-span-2" data-area="area-5" id="card-area-5">
+            <div class="group relative rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-indigo-950/40 via-slate-900/50 to-polyglot-card/70 backdrop-blur-xl border border-indigo-500/30 hover:border-indigo-400/50 transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-950/40 flex flex-col justify-between h-full overflow-hidden">
+              <div class="absolute -right-12 -top-12 w-56 h-56 bg-indigo-600/15 rounded-full blur-3xl group-hover:bg-indigo-600/25 transition-all pointer-events-none"></div>
               
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
-                <div>
-                  <h3 class="text-2xl font-bold text-white group-hover:text-indigo-300 transition-colors">
-                    Global Networking: Latinoamérica Conecta Talento
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase bg-indigo-500/20 text-indigo-300 border border-indigo-400/30 shadow-sm shadow-indigo-500/20">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span> ÁREA 05 — EL CORAZÓN DEL FORUM
+                  </span>
+                  <span class="text-xs text-indigo-300 font-semibold flex items-center gap-1">
+                    <i data-lucide="network" class="w-3.5 h-3.5"></i> Dinámica Interactiva en Vivo
+                  </span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-2">
+                  <h3 class="text-2xl sm:text-3xl font-bold text-white group-hover:text-indigo-200 transition-colors">
+                    Global Networking: Latinoamérica Conecta
                   </h3>
-                  <p class="text-sm text-indigo-200/90 mt-1">
-                    Espacios activos de conexión profesional entre Perú, Panamá, Costa Rica, Bolivia, Venezuela y México.
-                  </p>
+                </div>
+                <p class="text-xs sm:text-sm italic font-light text-indigo-200/90 mb-5">
+                  “Conexiones auténticas que trascienden pantallas y abren caminos reales”
+                </p>
+
+                <!-- Switcher -->
+                <div class="inline-flex items-center p-1 rounded-2xl bg-white/[0.04] border border-white/10 mb-5 shadow-inner">
+                  <button type="button" onclick="switchCardView('card-area-5', 'temas', this)" class="card-view-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-white/15 shadow-sm transition-all flex items-center gap-1.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-indigo-300"></i> Las 4 Preguntas Clave
+                  </button>
+                  <button type="button" onclick="switchCardView('card-area-5', 'speakers', this)" class="card-view-btn px-3.5 py-1.5 rounded-xl text-xs font-medium text-slate-400 hover:text-slate-200 transition-all flex items-center gap-1.5">
+                    <i data-lucide="users" class="w-3.5 h-3.5 text-indigo-300"></i> Liderazgo & Moderación
+                  </button>
+                </div>
+
+                <!-- View Temas (4 Preguntas) -->
+                <div class="view-temas grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <span class="w-6 h-6 rounded-full bg-indigo-500/25 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong class="text-xs text-white block">¿Quién soy?</strong>
+                      <span class="text-xs text-slate-300">Tu identidad, valores, ciudad y trayectoria formativa.</span>
+                    </div>
+                  </div>
+                  <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <span class="w-6 h-6 rounded-full bg-purple-500/25 text-purple-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong class="text-xs text-white block">¿Qué hago?</strong>
+                      <span class="text-xs text-slate-300">Tu emprendimiento, iniciativa actual o área de especialización.</span>
+                    </div>
+                  </div>
+                  <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <span class="w-6 h-6 rounded-full bg-sky-500/25 text-sky-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong class="text-xs text-white block">¿Qué busco?</strong>
+                      <span class="text-xs text-slate-300">Socios estratégicos, cofundadores, mentoría o clientes.</span>
+                    </div>
+                  </div>
+                  <div class="p-3.5 rounded-2xl bg-white/[0.03] border border-white/5 flex items-start gap-3 hover:bg-white/[0.05] transition-colors">
+                    <span class="w-6 h-6 rounded-full bg-emerald-500/25 text-emerald-300 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</span>
+                    <div>
+                      <strong class="text-xs text-white block">¿Qué puedo aportar?</strong>
+                      <span class="text-xs text-slate-300">Habilidades técnicas, idiomas, feedback y conexiones.</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- View Speakers -->
+                <div class="view-speakers hidden grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div onclick="openSpeakerSideDrawer('melanie-almeyda')" class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-indigo-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-melanie-almeyda.jpg" alt="Melanie Almeyda" class="w-11 h-11 rounded-xl object-cover object-center border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-indigo-300 transition-colors truncate">Melanie Almeyda</h5>
+                        <span class="text-[10px]">🇵🇪</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Directora General • Polyglot Map</p>
+                      <span class="text-[10px] text-amber-300 font-medium">YLAI Fellow 2026</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
+                  <div onclick="openSpeakerSideDrawer('nataly-napanga')" class="p-3 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-indigo-400/30 hover:bg-white/[0.07] transition-all cursor-pointer flex items-center gap-3 group/sp">
+                    <img src="assets/speaker-nataly-napanga.jpg" alt="Nataly Napanga" class="w-11 h-11 rounded-xl object-cover object-top border border-white/20 shrink-0" />
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-1.5">
+                        <h5 class="text-xs font-bold text-white group-hover/sp:text-indigo-300 transition-colors truncate">Nataly Napanga</h5>
+                        <span class="text-[10px]">🇵🇪</span>
+                      </div>
+                      <p class="text-[11px] text-slate-400 truncate">Co-Directora • CEO SPLENDIA</p>
+                      <span class="text-[10px] text-purple-300 font-medium">YLAI Fellow 2026</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover/sp:text-white transition-all"></i>
+                  </div>
                 </div>
               </div>
 
-              <!-- 4 Dinámicas Preguntas Clave -->
-              <p class="text-xs text-slate-400 mb-3 font-semibold uppercase tracking-wider">
-                Cada participante responderá en tiempo real:
-              </p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-indigo-500/30 text-indigo-300 flex items-center justify-center font-bold text-xs shrink-0">1</span>
-                  <span class="text-xs text-slate-200 font-medium"><strong>¿Quién soy?</strong> Identidad y trayectoria</span>
-                </div>
-                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-purple-500/30 text-purple-300 flex items-center justify-center font-bold text-xs shrink-0">2</span>
-                  <span class="text-xs text-slate-200 font-medium"><strong>¿Qué hago?</strong> Proyectos y fortalezas</span>
-                </div>
-                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-cyan-500/30 text-cyan-300 flex items-center justify-center font-bold text-xs shrink-0">3</span>
-                  <span class="text-xs text-slate-200 font-medium"><strong>¿Qué busco?</strong> Oportunidades, socios o empleo</span>
-                </div>
-                <div class="p-3 rounded-xl bg-white/[0.04] border border-white/5 flex items-center gap-3">
-                  <span class="w-6 h-6 rounded-full bg-emerald-500/30 text-emerald-300 flex items-center justify-center font-bold text-xs shrink-0">4</span>
-                  <span class="text-xs text-slate-200 font-medium"><strong>¿Qué puedo aportar?</strong> Habilidades y valor</span>
-                </div>
+              <!-- Card Bottom -->
+              <div class="pt-4 mt-6 border-t border-white/5 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
+                <span class="inline-flex items-center gap-1 text-slate-300 font-medium">
+                  <i data-lucide="clock" class="w-3.5 h-3.5 text-indigo-400"></i> 6:35 – 6:50 PM (PET) • Salas Simultáneas en Vivo
+                </span>
+                <a href="#networking" class="text-indigo-300 hover:text-white font-semibold inline-flex items-center gap-1 transition-colors">
+                  Explorar Dinámica Completa <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                </a>
               </div>
-            </div>
-
-            <div class="pt-4 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
-              <span class="text-slate-300">
-                <strong class="text-white">Resultado:</strong> No solo mirar una pantalla, sino salir con contactos reales.
-              </span>
-              <a href="#networking" class="text-indigo-400 hover:text-indigo-300 font-semibold inline-flex items-center gap-1">
-                Conoce la dinámica completa →
-              </a>
             </div>
           </div>
 
@@ -1053,8 +1358,7 @@
 
       </div>
     </section>
-
-    <!-- ==================== AGENDA GENERAL (4:00 - 7:00 PM) ==================== -->
+<!-- ==================== AGENDA GENERAL (4:00 - 7:00 PM) ==================== -->
     <section id="agenda" class="py-24 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -1146,7 +1450,7 @@
                 <h4 class="text-base sm:text-lg font-bold text-white">Liderazgo & Impacto: “Liderar para generar impacto”</h4>
                 <p class="text-xs text-slate-300 mt-1">
                   Liderazgo con propósito e integridad, proyectos de alto impacto social, transición a iniciativas sostenibles y liderazgo auténtico desde LatAm.<br/>
-                  <span class="text-slate-400">Speakers: Pedro Crisóstomo (Perú / Fulbright), Natalia Bejar (Perú / Preservando).</span>
+                  <span class="text-slate-400">Speaker: Natalia Bejar (Perú / Preservando).</span>
                 </p>
               </div>
             </div>
@@ -1428,45 +1732,7 @@
             </div>
           </div>
 
-          <!-- 5. Pedro Crisóstomo (Perú) -->
-          <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-blue-500/50 shadow-lg shadow-blue-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-2 bg-gradient-to-b from-blue-950/70 via-slate-900 to-black"
-               data-category="peru all"
-               onclick="openSpeakerSideDrawer('pedro-crisostomo')">
-            <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:scale-110 transition-transform duration-500">
-              <div class="w-52 h-52 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 blur-3xl"></div>
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center -translate-y-6">
-              <div class="w-24 h-24 rounded-3xl bg-slate-900/90 border border-blue-500/40 flex items-center justify-center text-blue-300 font-black text-3xl shadow-2xl">
-                PC
-              </div>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/20 group-hover:from-black/90 transition-all"></div>
-
-            <!-- Top Badges -->
-            <div class="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
-              <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/40 backdrop-blur-md font-mono">
-                YLAI & FULBRIGHT
-              </span>
-              <span class="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-black/60 text-white border border-white/20 backdrop-blur-md">
-                <span class="text-sm">🇵🇪</span> Perú
-              </span>
-            </div>
-
-            <!-- Bottom Info Overlay -->
-            <div class="absolute inset-x-0 bottom-0 p-5 pt-24 z-10 text-left">
-              <h4 class="text-xl sm:text-2xl font-black text-white uppercase tracking-tight leading-none group-hover:text-blue-300 transition-colors drop-shadow-md">
-                PEDRO CRISÓSTOMO
-              </h4>
-              <p class="text-xs sm:text-sm text-slate-300 font-medium mt-1.5 drop-shadow line-clamp-1">
-                Especialista en Liderazgo • Fulbright Scholar
-              </p>
-              <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono font-semibold text-blue-300/90 pt-2 border-t border-white/20">
-                <span>Panel 2 • Liderazgo & Impacto</span>
-                <i data-lucide="arrow-up-right" class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-              </div>
-            </div>
-          </div>
-
+          
           <!-- 6. Natalia Bejar (Perú) -->
           <div class="speaker-card group relative h-[420px] sm:h-[450px] rounded-3xl overflow-hidden cursor-pointer border border-emerald-500/50 shadow-lg shadow-emerald-500/15 transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-2"
                data-category="peru all"
@@ -2954,6 +3220,50 @@
     }
     startCountdown();
 
+    // ==================== 5 AREAS INTERACTIVE CARD FUNCTIONS ====================
+    function filterAreas(areaId, btn) {
+      document.querySelectorAll('.area-filter-btn').forEach(b => {
+        b.classList.remove('active', 'bg-white/15', 'text-white', 'border-purple-400/40', 'shadow-sm', 'shadow-purple-500/20');
+        b.classList.add('bg-white/[0.04]', 'text-slate-300', 'border-white/10');
+      });
+      if (btn) {
+        btn.classList.add('active', 'bg-white/15', 'text-white', 'border-purple-400/40', 'shadow-sm', 'shadow-purple-500/20');
+        btn.classList.remove('bg-white/[0.04]', 'text-slate-300', 'border-white/10');
+      }
+      document.querySelectorAll('.area-card-wrapper').forEach(card => {
+        if (areaId === 'all' || card.getAttribute('data-area') === areaId) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function switchCardView(cardId, view, btn) {
+      const card = document.getElementById(cardId);
+      if (!card) return;
+      card.querySelectorAll('.card-view-btn').forEach(b => {
+        b.classList.remove('active', 'text-white', 'bg-white/15', 'shadow-sm');
+        b.classList.add('text-slate-400');
+      });
+      if (btn) {
+        btn.classList.add('active', 'text-white', 'bg-white/15', 'shadow-sm');
+        btn.classList.remove('text-slate-400');
+      }
+      const viewTemas = card.querySelector('.view-temas');
+      const viewSpeakers = card.querySelector('.view-speakers');
+      if (view === 'temas') {
+        if (viewTemas) viewTemas.classList.remove('hidden');
+        if (viewSpeakers) viewSpeakers.classList.add('hidden');
+      } else {
+        if (viewTemas) viewTemas.classList.add('hidden');
+        if (viewSpeakers) viewSpeakers.classList.remove('hidden');
+      }
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
     // SPEAKERS FILTER TABS
     const filterBtns = document.querySelectorAll('.speaker-filter-btn');
     const speakerCards = document.querySelectorAll('.speaker-card');
@@ -3162,28 +3472,6 @@
         bio: [
           "Nataly Napanga es Co-Directora de Opportuneur Impact Forum 2026 y CEO de SPLENDIA. Es becaria seleccionada de YLAI 2026 por el Departamento de Estado de los Estados Unidos.",
           "Emprendedora destacada con amplia experiencia en modelos de negocio sostenibles, liderazgo femenino, empoderamiento juvenil y desarrollo de capacidades comerciales para micro y pequeñas empresas en el Perú y la región."
-        ]
-      },
-      "pedro-crisostomo": {
-        name: "Pedro Crisóstomo",
-        role: "Especialista en Liderazgo & Talento",
-        companyTag: "Fulbright Scholar & YLAI Fellow",
-        country: "Perú",
-        flag: "🇵🇪",
-        ylaiStatus: "Fulbright Scholar & YLAI Fellow",
-        badgeText: "YLAI FELLOW & FULBRIGHT",
-        badgeIcon: "award",
-        badgeClass: "bg-blue-500/20 text-blue-300 border border-blue-500/30",
-        initials: "PC",
-        gradient: "from-blue-600 to-indigo-600",
-        panelInfo: {
-          badge: "🟣 PANEL 2 — LIDERAZGO & IMPACTO",
-          title: "“Liderar para generar impacto”",
-          description: "Liderazgo con propósito e integridad, construcción de proyectos de alto impacto social, cómo pasar de una idea a una iniciativa sostenible y liderazgo auténtico desde Latinoamérica."
-        },
-        bio: [
-          "Pedro Crisóstomo es becario Fulbright y YLAI Fellow, especialista en desarrollo de liderazgo, talento profesional y gestión de proyectos de alto impacto social.",
-          "Ha guiado a cientos de jóvenes y profesionales en la formulación de planes de vida y carrera, promoviendo un liderazgo arraigado en valores de integridad y servicio comunitario con proyección internacional."
         ]
       },
       "natalia-bejar": {
