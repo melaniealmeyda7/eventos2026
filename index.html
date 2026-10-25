@@ -217,17 +217,32 @@
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <button type="button" onclick="showTab('concepto', true)" class="nav-link-btn hover:text-indigo-400 transition-colors text-indigo-300 font-bold" data-tab="concepto">Concepto</button>
-        <button type="button" onclick="showTab('sponsors', true)" class="nav-link-btn hover:text-indigo-400 transition-colors" data-tab="sponsors">Sponsors</button>
-        <button type="button" onclick="showTab('areas', true)" class="nav-link-btn hover:text-indigo-400 transition-colors" data-tab="areas">5 Áreas</button>
-        <button type="button" onclick="showTab('agenda', true)" class="nav-link-btn hover:text-indigo-400 transition-colors" data-tab="agenda">Agenda</button>
-        <button type="button" onclick="showTab('speakers', true)" class="nav-link-btn hover:text-indigo-400 transition-colors" data-tab="speakers">Speakers</button>
-        <button type="button" onclick="showTab('networking', true)" class="nav-link-btn hover:text-indigo-400 transition-colors" data-tab="networking">Networking</button>
-        <button type="button" onclick="showTab('bootcamp', true)" class="nav-link-btn hover:text-indigo-400 transition-colors flex items-center gap-1" data-tab="bootcamp">
-          <span class="text-amber-400 font-semibold">Bootcamp Lab</span>
-          <span class="text-[9px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded font-bold">NUEVO</span>
+      <!-- Desktop Interactive Tab Capsule (Delicate, Elegant, No Clutter) -->
+      <nav class="hidden lg:flex items-center p-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-inner shadow-black/40" id="topNavTabs">
+        <button type="button" onclick="showTab('concepto', true)" class="top-nav-tab-btn active px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-300 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-500/25 border border-indigo-400/40" data-tab="concepto">
+          Concepto
+        </button>
+        <button type="button" onclick="showTab('sponsors', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-white/[0.06]" data-tab="sponsors">
+          Sponsors
+        </button>
+        <button type="button" onclick="showTab('areas', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-white/[0.06]" data-tab="areas">
+          5 Áreas
+        </button>
+        <button type="button" onclick="showTab('agenda', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-white/[0.06]" data-tab="agenda">
+          Agenda
+        </button>
+        <button type="button" onclick="showTab('speakers', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-white/[0.06]" data-tab="speakers">
+          Speakers
+        </button>
+        <button type="button" onclick="showTab('networking', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-slate-300 hover:text-white hover:bg-white/[0.06]" data-tab="networking">
+          Networking
+        </button>
+        <button type="button" onclick="showTab('bootcamp', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-amber-300 hover:text-amber-200 hover:bg-white/[0.06] flex items-center gap-1.5" data-tab="bootcamp">
+          <span>Bootcamp</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+        </button>
+        <button type="button" onclick="showTab('registro', true)" class="top-nav-tab-btn px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-300 text-pink-300 hover:text-pink-200 hover:bg-white/[0.06]" data-tab="registro">
+          Credencial
         </button>
       </nav>
 
@@ -244,22 +259,40 @@
           <span>Registrarme Gratis</span>
         </a>
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir Menú">
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir Menú">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden glass-nav border-t border-slate-800 px-4 pt-3 pb-6 space-y-3">
-      <button type="button" onclick="showTab('concepto', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Concepto & Misión</button>
-      <button type="button" onclick="showTab('sponsors', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-indigo-300 font-semibold hover:bg-white/5">Sponsors & Aliados</button>
-      <button type="button" onclick="showTab('areas', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">5 Áreas del Forum</button>
-      <button type="button" onclick="showTab('agenda', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Agenda Oficial</button>
-      <button type="button" onclick="showTab('speakers', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Speakers & YLAI</button>
-      <button type="button" onclick="showTab('networking', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-slate-300 hover:bg-white/5">Global Networking</button>
-      <button type="button" onclick="showTab('bootcamp', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-amber-300 font-semibold hover:bg-white/5">Bootcamp Lab</button>
-      <button type="button" onclick="showTab('registro', true); toggleMobileMenu();" class="w-full text-left block px-3 py-2 rounded-lg text-pink-300 font-semibold hover:bg-white/5">Credencial Oficial</button>
+    <div id="mobileMenu" class="hidden lg:hidden glass-nav border-t border-slate-800 px-4 pt-3 pb-6 space-y-2">
+      <div class="grid grid-cols-2 gap-2 pb-2 border-b border-slate-800/60">
+        <button type="button" onclick="showTab('concepto', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="concepto">
+          <i data-lucide="sparkles" class="w-4 h-4 text-pink-400"></i> Concepto
+        </button>
+        <button type="button" onclick="showTab('sponsors', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="sponsors">
+          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i> Sponsors
+        </button>
+        <button type="button" onclick="showTab('areas', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="areas">
+          <i data-lucide="compass" class="w-4 h-4 text-cyan-400"></i> 5 Áreas
+        </button>
+        <button type="button" onclick="showTab('agenda', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="agenda">
+          <i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i> Agenda
+        </button>
+        <button type="button" onclick="showTab('speakers', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="speakers">
+          <i data-lucide="users" class="w-4 h-4 text-purple-400"></i> Speakers
+        </button>
+        <button type="button" onclick="showTab('networking', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="networking">
+          <i data-lucide="network" class="w-4 h-4 text-amber-400"></i> Networking
+        </button>
+        <button type="button" onclick="showTab('bootcamp', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-amber-300 hover:text-white hover:bg-amber-500/10 flex items-center gap-2 border border-amber-500/20" data-tab="bootcamp">
+          <i data-lucide="rocket" class="w-4 h-4 text-amber-400"></i> Bootcamp
+        </button>
+        <button type="button" onclick="showTab('registro', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-pink-300 hover:text-white hover:bg-pink-500/10 flex items-center gap-2 border border-pink-500/20" data-tab="registro">
+          <i data-lucide="ticket" class="w-4 h-4 text-pink-400"></i> Credencial
+        </button>
+      </div>
       <div class="pt-2 flex items-center gap-2">
         <a href="en.html" class="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 text-xs font-bold">
           <span>🇺🇸 Switch to English</span>
@@ -470,47 +503,6 @@
         <span class="text-slate-600">•</span>
       </div>
     </div>
-
-    <!-- ==================== STICKY TAB EXPLORER BAR ==================== -->
-    <nav id="forumTabBar" class="sticky top-20 z-30 bg-polyglot-deep/95 backdrop-blur-xl border-y border-indigo-500/25 py-3 shadow-2xl transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-1">
-          <button type="button" onclick="showTab('concepto', true)" class="section-tab-btn active px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30 border border-indigo-400/50" data-tab="concepto">
-            <i data-lucide="sparkles" class="w-4 h-4 text-pink-300"></i>
-            <span>Concepto & Misión</span>
-          </button>
-          <button type="button" onclick="showTab('sponsors', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="sponsors">
-            <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i>
-            <span>Sponsors & Aliados</span>
-          </button>
-          <button type="button" onclick="showTab('areas', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="areas">
-            <i data-lucide="compass" class="w-4 h-4 text-cyan-400"></i>
-            <span>5 Áreas del Forum</span>
-          </button>
-          <button type="button" onclick="showTab('agenda', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="agenda">
-            <i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i>
-            <span>Agenda Oficial</span>
-          </button>
-          <button type="button" onclick="showTab('speakers', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="speakers">
-            <i data-lucide="users" class="w-4 h-4 text-purple-400"></i>
-            <span>Speakers & YLAI</span>
-          </button>
-          <button type="button" onclick="showTab('networking', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="networking">
-            <i data-lucide="network" class="w-4 h-4 text-amber-400"></i>
-            <span>Global Networking</span>
-          </button>
-          <button type="button" onclick="showTab('bootcamp', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="bootcamp">
-            <i data-lucide="rocket" class="w-4 h-4 text-amber-300"></i>
-            <span>Bootcamp Lab</span>
-            <span class="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded-full font-extrabold border border-amber-500/30">NUEVO</span>
-          </button>
-          <button type="button" onclick="showTab('registro', true)" class="section-tab-btn px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2 whitespace-nowrap bg-white/[0.04] text-slate-300 hover:text-white border border-white/10" data-tab="registro">
-            <i data-lucide="ticket" class="w-4 h-4 text-pink-400"></i>
-            <span>Credencial & Registro</span>
-          </button>
-        </div>
-      </div>
-    </nav>
 
     <!-- ==================== TAB PANES CONTAINER ==================== -->
     <div id="forumTabPanes">
@@ -3256,7 +3248,7 @@ Un espacio de alto impacto que conecta el talento de América Latina con innovac
     }
     startCountdown();
 
-    // ==================== MODULAR SECTION TABS EXPLORER ====================
+    // ==================== MODULAR SECTION TABS EXPLORER (TOP NAVBAR CAPSULE) ====================
     var TAB_SECTIONS = ['concepto', 'sponsors', 'areas', 'agenda', 'speakers', 'networking', 'bootcamp', 'registro'];
 
     function showTab(tabId, shouldScroll) {
@@ -3276,27 +3268,31 @@ Un espacio de alto impacto que conecta el talento de América Latina con innovac
         }
       });
 
-      // Update sticky tab bar buttons
-      document.querySelectorAll('.section-tab-btn').forEach(function(btn) {
+      // Update Top Nav Capsule Buttons
+      document.querySelectorAll('.top-nav-tab-btn').forEach(function(btn) {
         var target = btn.getAttribute('data-tab');
         if (target === tabId) {
-          btn.classList.add('active', 'bg-gradient-to-r', 'from-indigo-600', 'to-purple-600', 'text-white', 'font-bold', 'shadow-lg', 'shadow-indigo-500/30', 'border-indigo-400/50');
-          btn.classList.remove('bg-white/[0.04]', 'text-slate-300', 'border-white/10');
+          btn.classList.add('active', 'bg-gradient-to-r', 'from-indigo-600', 'to-purple-600', 'text-white', 'font-bold', 'shadow-md', 'shadow-indigo-500/25', 'border-indigo-400/40');
+          btn.classList.remove('text-slate-300', 'text-amber-300', 'text-pink-300');
         } else {
-          btn.classList.remove('active', 'bg-gradient-to-r', 'from-indigo-600', 'to-purple-600', 'text-white', 'font-bold', 'shadow-lg', 'shadow-indigo-500/30', 'border-indigo-400/50');
-          btn.classList.add('bg-white/[0.04]', 'text-slate-300', 'border-white/10');
+          btn.classList.remove('active', 'bg-gradient-to-r', 'from-indigo-600', 'to-purple-600', 'text-white', 'font-bold', 'shadow-md', 'shadow-indigo-500/25', 'border-indigo-400/40');
+          if (target === 'bootcamp') {
+            btn.classList.add('text-amber-300');
+          } else if (target === 'registro') {
+            btn.classList.add('text-pink-300');
+          } else {
+            btn.classList.add('text-slate-300');
+          }
         }
       });
 
-      // Update top navbar links
-      document.querySelectorAll('.nav-link-btn').forEach(function(link) {
-        var target = link.getAttribute('data-tab');
+      // Update Mobile Dropdown Buttons
+      document.querySelectorAll('.mobile-nav-btn').forEach(function(btn) {
+        var target = btn.getAttribute('data-tab');
         if (target === tabId) {
-          link.classList.add('text-indigo-300', 'font-bold');
-          link.classList.remove('text-slate-300');
+          btn.classList.add('bg-indigo-600/30', 'text-white', 'font-bold', 'border-indigo-500');
         } else {
-          link.classList.remove('text-indigo-300', 'font-bold');
-          link.classList.add('text-slate-300');
+          btn.classList.remove('bg-indigo-600/30', 'text-white', 'font-bold', 'border-indigo-500');
         }
       });
 
@@ -3310,12 +3306,12 @@ Un espacio de alto impacto que conecta el talento de América Latina con innovac
         lucide.createIcons();
       }
 
-      // Smooth scroll to top of tabs if requested
+      // Smooth scroll to top of tab container if requested
       if (shouldScroll) {
-        var tabBar = document.getElementById('forumTabBar');
-        if (tabBar) {
-          var yOffset = -90;
-          var y = tabBar.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        var container = document.getElementById('forumTabPanes');
+        if (container) {
+          var yOffset = -85;
+          var y = container.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
         }
       }
