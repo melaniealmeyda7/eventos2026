@@ -2786,7 +2786,7 @@ Un espacio de alto impacto que conecta el talento de América Latina con innovac
                 <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Vista Previa en Vivo</span>
                 
                 <!-- EXACT BADGE DESIGN (Matching Image 1 in PARTICIPANTE Mode) -->
-                <div id="officialBadgeCard" class="w-full max-w-[380px] rounded-none bg-gradient-to-b from-[#1b2576] via-[#161f62] to-[#11174e] border-2 border-white/20 shadow-2xl shadow-indigo-950/60 overflow-hidden relative text-center pt-8 pb-0 select-none">
+                <div id="officialBadgeCard" class="w-full max-w-[380px] rounded-none bg-gradient-to-b from-[#011635] via-[#011635] to-[#142b79] shadow-2xl shadow-black/80 overflow-hidden relative text-center pt-8 pb-0 select-none">
                   
                   <!-- Subtle Background Concentric Glow -->
                   <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -3601,14 +3601,14 @@ Un espacio de alto impacto que conecta el talento de América Latina con innovac
         ctx.save();
         // Rectangular badge with straight 90-degree corners (en punta, sin formas curvadas)
 
-        // Background Gradient
-        const grad = ctx.createLinearGradient(0, 0, 0, 1024);
-        grad.addColorStop(0, '#1a2575');
-        grad.addColorStop(0.5, '#151e60');
-        grad.addColorStop(0.75, '#11174d');
-        grad.addColorStop(1, '#ffffff');
+        // Background Gradient with exact midnight-to-deep-blue hue of reference
+        const grad = ctx.createLinearGradient(0, 0, 0, 750);
+        grad.addColorStop(0, '#011635');
+        grad.addColorStop(0.45, '#011635');
+        grad.addColorStop(0.75, '#081d52');
+        grad.addColorStop(1, '#142b79');
         ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, 819, 1024);
+        ctx.fillRect(0, 0, 819, 750);
 
         // Subtle background glow
         const radialGlow = ctx.createRadialGradient(409.5, 260, 40, 409.5, 260, 240);
