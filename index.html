@@ -443,7 +443,7 @@
           <a href="#sponsors" onclick="showTab('sponsors', true); return false;" class="flex items-center gap-2 bg-indigo-950/40 border border-indigo-500/30 hover:border-indigo-400 rounded-full py-1.5 px-4 transition-colors">
             <span class="text-xs uppercase tracking-wider text-indigo-400 font-bold">Con el apoyo de:</span>
             <span class="text-slate-200 font-semibold text-xs flex items-center gap-2">
-              <span>U.S. Department of State</span> • <span>YLAI Program</span>
+              <span>USA</span> • <span>U.S. Department of State</span> • <span>YLAI</span> • <span>IREX</span>
             </span>
           </a>
         </div>
@@ -455,7 +455,7 @@
     <div class="border-y border-slate-800/80 bg-polyglot-deep/60 py-4 overflow-hidden relative">
       <div class="flex whitespace-nowrap animate-marquee items-center gap-8 text-sm font-medium text-slate-400">
         <span class="flex items-center gap-2 text-indigo-300 font-bold tracking-wider">
-          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i> CON EL APOYO DE: U.S. DEPARTMENT OF STATE • YLAI PROGRAM
+          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i> CON EL APOYO DE: USA • U.S. DEPARTMENT OF STATE • YLAI PROGRAM • IREX
         </span>
         <span class="text-slate-600">•</span>
         <span class="flex items-center gap-2 text-slate-200 font-semibold"><span class="text-lg">🇵🇪</span> PERÚ</span>
@@ -760,7 +760,7 @@
         <div>
           <div class="text-center sm:text-left mb-12">
             <p class="mb-3 text-xs sm:text-sm font-bold uppercase tracking-widest text-rose-400 flex items-center justify-center sm:justify-start gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-rose-400"></span> Sponsors Oficiales
+              <span class="w-2 h-2 rounded-full bg-rose-400"></span> Sponsors Oficiales & Respaldo Institucional
             </p>
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
               Con el apoyo de
@@ -770,43 +770,106 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
+          <!-- Institutional Logo Strip (USA • U.S. Dept of State • YLAI • IREX) -->
+          <div class="glass-card p-6 rounded-3xl border border-white/10 bg-gradient-to-r from-slate-950/80 via-slate-900/60 to-slate-950/80 flex items-center justify-center sm:justify-between flex-wrap gap-6 mb-12 shadow-2xl">
+            <div class="flex items-center justify-center h-16 w-36 sm:w-44 bg-white rounded-2xl p-2.5 shadow-md shadow-white/5 hover:scale-105 transition-transform">
+              <img src="assets/ally-usa.png" alt="United States of America" class="h-full w-auto object-contain" />
+            </div>
+            <div class="flex items-center justify-center h-16 w-36 sm:w-44 bg-white rounded-2xl p-2.5 shadow-md shadow-white/5 hover:scale-105 transition-transform">
+              <img src="assets/ally-usembassy.png" alt="U.S. Department of State" class="h-full w-auto object-contain" />
+            </div>
+            <div class="flex items-center justify-center h-16 w-36 sm:w-44 bg-white rounded-2xl p-2.5 shadow-md shadow-white/5 hover:scale-105 transition-transform">
+              <img src="assets/ally-ylai.png" alt="YLAI Program" class="h-full w-auto object-contain" />
+            </div>
+            <div class="flex items-center justify-center h-16 w-36 sm:w-44 bg-white rounded-2xl p-2.5 shadow-md shadow-white/5 hover:scale-105 transition-transform">
+              <img src="assets/ally-irex.png" alt="IREX" class="h-full w-auto object-contain" />
+            </div>
+          </div>
+
+          <!-- 4 Detailed Sponsor Cards Grid -->
+          <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
             
-            <!-- Sponsor 1: U.S. Department of State -->
-            <a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-blue-500/50 flex flex-col items-center text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
-              <div class="flex h-28 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
-                <img src="assets/ally-usembassy.png" alt="U.S. Department of State" class="h-20 w-auto object-contain" />
-              </div>
-              <div class="space-y-1.5">
-                <span class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors block">U.S. Department of State</span>
-                <span class="text-xs font-semibold text-slate-300 block">Departamento de Estado de los Estados Unidos</span>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                  Departamento Ejecutivo del Gobierno Federal de los Estados Unidos responsable de las relaciones internacionales y promotor de programas de liderazgo juvenil, innovación cívica y prosperidad económica en el hemisferio occidental.
-                </p>
-                <div class="pt-2">
-                  <span class="inline-flex items-center gap-1 text-xs text-indigo-400 font-semibold group-hover:underline">
-                    state.gov — Sitio Oficial →
-                  </span>
+            <!-- Sponsor 1: USA -->
+            <a href="https://www.usa.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-red-500/50 flex flex-col justify-between text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div>
+                <div class="flex h-24 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-red-500/10 group-hover:scale-105 transition-transform">
+                  <img src="assets/ally-usa.png" alt="United States of America" class="h-14 w-auto object-contain" />
                 </div>
+                <div class="space-y-1.5 mt-5">
+                  <span class="text-base sm:text-lg font-bold text-white group-hover:text-red-300 transition-colors block">United States of America</span>
+                  <span class="text-xs font-semibold text-slate-300 block">Gobierno de los EE. UU.</span>
+                  <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Respaldo diplomático promoviendo el intercambio bilateral, la cooperación educativa y el desarrollo socioeconómico en las Américas.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-white/5">
+                <span class="inline-flex items-center gap-1 text-xs text-red-300 font-semibold group-hover:underline">
+                  usa.gov — Portal Oficial →
+                </span>
               </div>
             </a>
 
-            <!-- Sponsor 2: YLAI Program -->
-            <a href="https://ylai.state.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-amber-500/50 flex flex-col items-center text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
-              <div class="flex h-28 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform">
-                <img src="assets/ally-ylai.png" alt="YLAI Program" class="h-16 w-auto object-contain" />
-              </div>
-              <div class="space-y-1.5">
-                <span class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors block">YLAI Program</span>
-                <span class="text-xs font-semibold text-amber-400 block">Young Leaders of the Americas Initiative</span>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                  Iniciativa insignia del Departamento de Estado de los EE. UU. implementada por IREX para empoderar, capacitar y conectar en redes a emprendedores y líderes de cambio sobresalientes de América Latina, el Caribe y Canadá.
-                </p>
-                <div class="pt-2">
-                  <span class="inline-flex items-center gap-1 text-xs text-amber-400 font-semibold group-hover:underline">
-                    ylai.state.gov — Sitio Oficial →
-                  </span>
+            <!-- Sponsor 2: U.S. Department of State -->
+            <a href="https://www.state.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-blue-500/50 flex flex-col justify-between text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div>
+                <div class="flex h-24 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-blue-500/10 group-hover:scale-105 transition-transform">
+                  <img src="assets/ally-usembassy.png" alt="U.S. Department of State" class="h-16 w-auto object-contain" />
                 </div>
+                <div class="space-y-1.5 mt-5">
+                  <span class="text-base sm:text-lg font-bold text-white group-hover:text-blue-300 transition-colors block">U.S. Department of State</span>
+                  <span class="text-xs font-semibold text-slate-300 block">Departamento de Estado</span>
+                  <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Departamento Ejecutivo del Gobierno Federal responsable de las relaciones internacionales y promotor de becas de liderazgo juvenil.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-white/5">
+                <span class="inline-flex items-center gap-1 text-xs text-indigo-400 font-semibold group-hover:underline">
+                  state.gov — Sitio Oficial →
+                </span>
+              </div>
+            </a>
+
+            <!-- Sponsor 3: YLAI Program -->
+            <a href="https://ylai.state.gov/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-amber-500/50 flex flex-col justify-between text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div>
+                <div class="flex h-24 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-amber-500/10 group-hover:scale-105 transition-transform">
+                  <img src="assets/ally-ylai.png" alt="YLAI Program" class="h-14 w-auto object-contain" />
+                </div>
+                <div class="space-y-1.5 mt-5">
+                  <span class="text-base sm:text-lg font-bold text-white group-hover:text-amber-300 transition-colors block">YLAI Program</span>
+                  <span class="text-xs font-semibold text-amber-400 block">Young Leaders of the Americas</span>
+                  <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Iniciativa insignia de empoderamiento, capacitación y conexión en redes para emprendedores y líderes de cambio sobresalientes de América Latina y el Caribe.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-white/5">
+                <span class="inline-flex items-center gap-1 text-xs text-amber-400 font-semibold group-hover:underline">
+                  ylai.state.gov — Sitio Oficial →
+                </span>
+              </div>
+            </a>
+
+            <!-- Sponsor 4: IREX -->
+            <a href="https://www.irex.org/" target="_blank" rel="noopener noreferrer" class="glass-card p-6 sm:p-7 rounded-3xl border border-slate-800 hover:border-emerald-500/50 flex flex-col justify-between text-center gap-5 transition-all duration-300 hover:-translate-y-1 group">
+              <div>
+                <div class="flex h-24 w-full items-center justify-center rounded-2xl bg-white p-3 shadow-lg shadow-emerald-500/10 group-hover:scale-105 transition-transform">
+                  <img src="assets/ally-irex.png" alt="IREX" class="h-10 sm:h-11 w-auto object-contain" />
+                </div>
+                <div class="space-y-1.5 mt-5">
+                  <span class="text-base sm:text-lg font-bold text-white group-hover:text-emerald-300 transition-colors block">IREX</span>
+                  <span class="text-xs font-semibold text-emerald-400 block">International Research & Exchanges</span>
+                  <p class="text-xs text-slate-400 mt-2 leading-relaxed">
+                    Organización global de desarrollo y educación con más de 50 años de experiencia, aliada e implementadora oficial del programa YLAI.
+                  </p>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-white/5">
+                <span class="inline-flex items-center gap-1 text-xs text-emerald-400 font-semibold group-hover:underline">
+                  irex.org — Sitio Oficial →
+                </span>
               </div>
             </a>
 
@@ -3142,9 +3205,11 @@ Un espacio de alto impacto que conecta el talento de América Latina con innovac
         <div class="space-y-2">
           <h5 class="text-white font-bold text-sm mb-3">Comunidad & Aliados</h5>
           <ul class="space-y-2 text-slate-400">
+            <li>United States of America (USA)</li>
+            <li>U.S. Department of State</li>
             <li>Young Leaders of the Americas (YLAI)</li>
+            <li>IREX (Implementing Partner)</li>
             <li>SPLENDIA Community</li>
-            <li>Red de Becarios & Fulbright Alumni</li>
             <li>Bootcamp Lab Perú & LatAm</li>
           </ul>
         </div>
