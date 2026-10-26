@@ -218,7 +218,7 @@
       </a>
 
       <!-- Desktop Interactive Tab Capsule (Delicate, Elegant, No Clutter) -->
-      <nav class="hidden lg:flex items-center p-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-inner shadow-black/40" id="topNavTabs">
+      <nav class="hidden xl:flex items-center p-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-xl shadow-inner shadow-black/40" id="topNavTabs">
         <button type="button" onclick="showTab('concepto', true)" class="top-nav-tab-btn active px-3.5 py-1.5 rounded-full text-xs font-bold transition-all duration-300 bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md shadow-indigo-500/25 border border-indigo-400/40" data-tab="concepto">
           Concept
         </button>
@@ -258,53 +258,165 @@
           <i data-lucide="ticket" class="w-4 h-4"></i>
           <span>Register Free</span>
         </a>
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Open Menu">
+        <!-- Mobile/iPad Sidebar Menu Toggle Button (Visible up to 1280px) -->
+        <button id="mobileMenuBtn" type="button" onclick="openMobileMenu()" class="xl:hidden p-2 sm:p-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white focus:outline-none transition-colors flex items-center justify-center cursor-pointer shadow-sm" aria-label="Open Menu">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden glass-nav border-t border-slate-800 px-4 pt-3 pb-6 space-y-2">
-      <div class="grid grid-cols-2 gap-2 pb-2 border-b border-slate-800/60">
-        <button type="button" onclick="showTab('concepto', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="concepto">
-          <i data-lucide="sparkles" class="w-4 h-4 text-pink-400"></i> Concept
-        </button>
-        <button type="button" onclick="showTab('sponsors', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="sponsors">
-          <i data-lucide="shield-check" class="w-4 h-4 text-indigo-400"></i> Sponsors
-        </button>
-        <button type="button" onclick="showTab('areas', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="areas">
-          <i data-lucide="compass" class="w-4 h-4 text-cyan-400"></i> 5 Focus Areas
-        </button>
-        <button type="button" onclick="showTab('agenda', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="agenda">
-          <i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i> Agenda
-        </button>
-        <button type="button" onclick="showTab('speakers', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="speakers">
-          <i data-lucide="users" class="w-4 h-4 text-purple-400"></i> Speakers
-        </button>
-        <button type="button" onclick="showTab('networking', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white hover:bg-white/5 flex items-center gap-2" data-tab="networking">
-          <i data-lucide="network" class="w-4 h-4 text-amber-400"></i> Networking
-        </button>
-        <button type="button" onclick="showTab('bootcamp', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-amber-300 hover:text-white hover:bg-amber-500/10 flex items-center gap-2 border border-amber-500/20" data-tab="bootcamp">
-          <i data-lucide="rocket" class="w-4 h-4 text-amber-400"></i> Bootcamp
-        </button>
-        <button type="button" onclick="showTab('registro', true); toggleMobileMenu();" class="mobile-nav-btn text-left px-3 py-2.5 rounded-xl text-xs font-semibold text-pink-300 hover:text-white hover:bg-pink-500/10 flex items-center gap-2 border border-pink-500/20" data-tab="registro">
-          <i data-lucide="ticket" class="w-4 h-4 text-pink-400"></i> Badge
+    <!-- Mobile/Tablet Off-Canvas Navigation Sidebar (100% Interactive for Phone & iPad) -->
+    <!-- Backdrop Overlay -->
+    <div id="mobileMenuBackdrop" onclick="closeMobileMenu()" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[80] opacity-0 pointer-events-none transition-opacity duration-300 ease-out" aria-hidden="true"></div>
+
+    <!-- Slide-in Sidebar Drawer from Right -->
+    <aside id="mobileMenuDrawer" class="hidden fixed inset-y-0 right-0 w-[88%] max-w-[380px] z-[85] transform translate-x-full transition-transform duration-300 ease-out bg-slate-950/98 border-l border-white/10 shadow-2xl flex flex-col justify-between overflow-hidden" aria-label="Navigation Menu">
+      
+      <!-- Drawer Header -->
+      <div class="p-5 border-b border-white/10 flex items-center justify-between bg-slate-900/70 sticky top-0 z-20 backdrop-blur-md">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white shadow-md">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="font-extrabold text-base text-white tracking-tight block">OPPORTUNEUR</span>
+            <span class="text-[10px] text-amber-300 font-mono font-semibold uppercase tracking-wider block">FORUM 2026 • NAVIGATION</span>
+          </div>
+        </div>
+        <button type="button" onclick="closeMobileMenu()" class="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white transition-colors cursor-pointer" aria-label="Close Menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="pt-2 flex items-center gap-2">
-        <a href="index.html" class="flex-1 inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 text-xs font-bold">
-          <span>🇵🇪 Switch to Spanish</span>
+
+      <!-- Drawer Navigation Tabs List (Scrollable) -->
+      <div class="p-4 sm:p-5 overflow-y-auto space-y-2 flex-1">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-400 px-2 mb-2 flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Summit Sections
+        </div>
+
+        <button type="button" onclick="showTab('concepto', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-white/5 hover:border-pink-500/40 hover:bg-pink-500/10 flex items-center justify-between transition-all group cursor-pointer" data-tab="concepto">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white group-hover:text-pink-300 block">Concept</span>
+              <span class="text-[11px] text-slate-400 block">The purpose &amp; vision</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('sponsors', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-white/5 hover:border-indigo-500/40 hover:bg-indigo-500/10 flex items-center justify-between transition-all group cursor-pointer" data-tab="sponsors">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white group-hover:text-indigo-300 block">Sponsors &amp; Allies</span>
+              <span class="text-[11px] text-slate-400 block">USA, Dept of State, YLAI, IREX</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('areas', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-white/5 hover:border-cyan-500/40 hover:bg-cyan-500/10 flex items-center justify-between transition-all group cursor-pointer" data-tab="areas">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="compass" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white group-hover:text-cyan-300 block">5 Focus Areas</span>
+              <span class="text-[11px] text-slate-400 block">Entrepreneurship, AI, Talent</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('agenda', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-white/5 hover:border-emerald-500/40 hover:bg-emerald-500/10 flex items-center justify-between transition-all group cursor-pointer" data-tab="agenda">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white group-hover:text-emerald-300 block">Official Agenda</span>
+              <span class="text-[11px] text-slate-400 block">4:00 – 7:00 PM • CEO Session &amp; Panels</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('speakers', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-white/5 hover:border-purple-500/40 hover:bg-purple-500/10 flex items-center justify-between transition-all group cursor-pointer" data-tab="speakers">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white group-hover:text-purple-300 block">Speakers &amp; Leaders</span>
+              <span class="text-[11px] text-slate-400 block">Top talent from 6+ countries</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('networking', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-white/5 hover:border-amber-500/40 hover:bg-amber-500/10 flex items-center justify-between transition-all group cursor-pointer" data-tab="networking">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+              <i data-lucide="network" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <span class="text-sm font-bold text-white group-hover:text-amber-300 block">Dynamic Networking</span>
+              <span class="text-[11px] text-slate-400 block">Direct relationships &amp; high value</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('bootcamp', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 flex items-center justify-between transition-all group cursor-pointer" data-tab="bootcamp">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-amber-500/30 text-amber-300 flex items-center justify-center shrink-0">
+              <i data-lucide="rocket" class="w-4 h-4 text-amber-400"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5">
+                <span class="text-sm font-black text-amber-300 group-hover:text-amber-200">Bootcamp Lab</span>
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+              </div>
+              <span class="text-[11px] text-amber-200/80 block">No prerequisites • Limited spots</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-amber-400 group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+        <button type="button" onclick="showTab('registro', true); closeMobileMenu();" class="mobile-nav-btn w-full text-left p-3 rounded-2xl glass-card border border-pink-500/40 bg-pink-500/10 hover:bg-pink-500/20 flex items-center justify-between transition-all group cursor-pointer" data-tab="registro">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-pink-500/30 text-pink-300 flex items-center justify-center shrink-0">
+              <i data-lucide="ticket" class="w-4 h-4 text-pink-400"></i>
+            </div>
+            <div>
+              <span class="text-sm font-black text-pink-300 group-hover:text-pink-200 block">Official Badge</span>
+              <span class="text-[11px] text-pink-200/80 block">Customize, download &amp; share</span>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform"></i>
+        </button>
+      </div>
+
+      <!-- Drawer Footer Actions -->
+      <div class="p-5 border-t border-white/10 bg-slate-900/80 space-y-3 sticky bottom-0 z-20 backdrop-blur-md">
+        <a href="index.html" class="w-full inline-flex justify-center items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 text-xs font-bold transition-colors">
+          <span class="text-sm">🇵🇪</span>
+          <span>Switch to Spanish Version</span>
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-indigo-400"></i>
         </a>
-      </div>
-      <div class="pt-1">
-        <a href="https://luma.com/qwjnxa9n" target="_blank" rel="noopener noreferrer" class="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl btn-gradient-polyglot text-white font-semibold text-sm">
+
+        <a href="https://luma.com/qwjnxa9n" target="_blank" rel="noopener noreferrer" class="w-full inline-flex justify-center items-center gap-2 px-5 py-3.5 rounded-xl btn-gradient-polyglot text-white font-black text-sm shadow-lg shadow-indigo-500/25 hover:brightness-110 transition-all">
           <i data-lucide="ticket" class="w-4 h-4"></i>
-          <span>Register Free</span>
+          <span>Register Free on Luma</span>
         </a>
       </div>
-    </div>
+
+    </aside>
   </header>
 
   <main class="relative z-10">
@@ -3220,19 +3332,7 @@ An international summit connecting Latin American talent with global employment,
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu on clicking any navigation link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
+// Mobile menu handled cleanly via openMobileMenu/closeMobileMenu
 
     // COUNTDOWN TIMER TO NOVEMBER 7, 2026 - 16:00 PET (UTC-5)
     function startCountdown() {
@@ -3336,12 +3436,56 @@ An international summit connecting Latin American talent with global employment,
       }
     }
 
-    function toggleMobileMenu() {
-      var mobileMenu = document.getElementById('mobileMenu');
-      if (mobileMenu) {
-        mobileMenu.classList.toggle('hidden');
+    function openMobileMenu() {
+      var drawer = document.getElementById('mobileMenuDrawer');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (drawer && backdrop) {
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('hidden');
+        // Force reflow for CSS transition
+        void drawer.offsetWidth;
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100');
+        drawer.classList.remove('translate-x-full');
+        drawer.classList.add('translate-x-0');
+        document.body.classList.add('overflow-hidden');
+        if (window.lucide) lucide.createIcons();
       }
     }
+
+    function closeMobileMenu() {
+      var drawer = document.getElementById('mobileMenuDrawer');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      if (drawer && backdrop) {
+        backdrop.classList.remove('opacity-100');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        drawer.classList.remove('translate-x-0');
+        drawer.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+        setTimeout(function() {
+          if (drawer.classList.contains('translate-x-full')) {
+            backdrop.classList.add('hidden');
+            drawer.classList.add('hidden');
+          }
+        }, 300);
+      }
+    }
+
+    function toggleMobileMenu() {
+      var drawer = document.getElementById('mobileMenuDrawer');
+      if (drawer && drawer.classList.contains('translate-x-0')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
 
     function filterAreas(areaId, btn) {
       // Compatibility stub: All 5 areas are displayed together in the 2-column grid
